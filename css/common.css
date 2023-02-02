@@ -111,23 +111,37 @@ h2{
     margin-left: -250px;
     text-align: center;
     line-height: 150px;
-    font-family: "sungsil";
+    font-family: "NanumEB";
     font-weight: bold;
     font-size: 50px;
     color: red;
 }
-ul{
+#h2S{
+    font-family: "NanumB";
+    font-weight: normal;
+    color: #fff;
+}
+#nowShowing>ul{
     position: relative;
     margin: 0 auto;
-    width: 800px;
+    /* white-space: nowrap;
+    overflow: hidden; */
 }
-li{
-sdfsdfsdf
-}
-img{
+#nowShowing li{
     position: relative;
-    width: 100px;
+    float: left;
+    margin: 10px;
+    top: 300px;
+    width: 9%;
 }
+#nowShowing img{
+    position: relative;
+    width: 100%;
+    margin-right: 10px;
+}
+
+
+
 /* * * * * #choice영역 * * * * */
 
 /* * * * * #ticket영역 * * * * */
