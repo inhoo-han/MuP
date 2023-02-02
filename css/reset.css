@@ -5,6 +5,36 @@
    License: none (public domain)
 */
 
+@font-face {
+	font-family: "Nanum";
+	font-weight: 400;
+	src: url("../font/NanumSquareRoundR.ttf")format("truetype");
+}
+@font-face {
+	font-family: "NanumL";
+	font-weight: 400;
+	src: url("../font/NanumSquareRoundL.ttf")format("truetype");
+}
+@font-face {
+	font-family: "NanumB";
+	font-weight: bold;
+	src: url("../font/NanumSquareRoundB.ttf")format("truetype");
+}
+@font-face {
+	font-family: "NanumEB";
+	font-weight: bold;
+	src: url("../font/NanumSquareRoundEB.ttf")format("truetype");
+}
+@font-face {
+	font-family: "sungsil";
+	font-weight: 400;
+	src: url("../font/나눔손글씨 성실체.ttf")format("truetype");
+}
+@font-face {
+	font-family: "Icon";
+	font-weight: 400;
+	src: url("../font/webcafeIcon.ttf")format("truetype");
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,6 +54,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: "NanumB";
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
