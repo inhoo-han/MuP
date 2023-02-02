@@ -180,13 +180,5 @@ h3{
     /* position: relative; */
     /* left: 460px; */
 }
-#choice img{
-    width: 100px;
+.btnSubmit::before{
 }
-/* * * * * #ticket영역 * * * * */
-
-/* * * * * #community영역 * * * * */
-
-/* * * * * #topic영역 * * * * */
-
-/* * * * * footer영역 * * * * */
