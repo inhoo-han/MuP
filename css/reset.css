@@ -4,6 +4,40 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+/* 폰트 */
+@font-face {
+    font-family: "NanumR";
+    font-weight: normal;
+    src: url("../font/NanumSquareRoundR.ttf")format("truetype");
+}
+@font-face {
+    font-family: "NanumL";
+    font-weight: normal;
+    src: url("../font/NanumSquareRoundL.ttf")format("truetype");
+}
+@font-face {
+    font-family: "NanumB";
+    font-weight: bold;
+    src: url("../font/NanumSquareRoundB.ttf")format("truetype");
+}
+@font-face {
+    font-family: "NanumEB";
+    font-weight: bold;
+    src: url("../font/NanumSquareRoundEB.ttf")format("truetype");
+}
+@font-face {
+    font-family: "sungsil";
+    font-weight: normal;
+    src: url("../font/나눔손글씨\ 성실체.ttf")format("truetype");
+}
+@font-face {
+    font-family: "webIcon";
+    font-weight: 400;
+    src: url("../font/webcafeIcon.eot#iefix")format("embedded-opentype"),
+        url("../font/webcafeIcon.woff")format("woff"),
+        url("../font/webcafeIcon.ttf")format("truetype"),
+        url("../font/webcafeIcon.svg#webcafereqular")format("svg");
+}
 
 @font-face {
 	font-family: "Nanum";
@@ -54,7 +88,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	font-family: "NanumB";
+	font-family: "NanumR";
+	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -83,3 +118,4 @@ a{
 	text-decoration: none;
 	color: #000;
 }
+
