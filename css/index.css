@@ -40,7 +40,7 @@ h2{
     float: left;
     margin: 10px;
     top: 300px;
-    width: 9%;
+    width: 160px;
 }
 #nowShowing img{
     position: relative;
@@ -62,28 +62,103 @@ h3{
     height: 50px;
     left: 50%;
     margin-left: -150px;
-    top: 100px;
+    top: 50px;
     font-family: "NanumEB";
-    font-size: 20px;
+    font-size: 40px;
     text-align: center;
+}
+#choice section{
+    position: relative;
+}
+#choice article{
+    position: relative;
+    float: left;
+    width: 430px;
+    height: 760px;
+    padding: 18px;
+    margin: 2px;
+    top: 150px;
+    left: 45px;
+}
+#choice .choiceNow{
+    border-right: 1px solid #999;
+}
+#choice .choiceExpect{
+    border-left: 1px solid #999;
 }
 #choice ol{
     position: absolute;
-    width: 450px;
-    height: 700px;
-    border: 1px solid navy;
-    top: 250px;
-    left: 45px;
+    margin: 0 auto;
+    width: 400px;
+    left: 15px;
+    padding: 10px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #ccc 0%, #fff 100%);
 }
-#choice .choiceExpect{
-    /* position: relative; */
-    /* left: 460px; */
+#choice ol li{
+    position: relative;
+    counter-increment: number;
+}
+/* 숫자 위치 크기 생김새 다 거지같음 */
+#choice ol li::before{
+    position: relative;
+    top: -30px;
+    /* left: 30px; */
+    content: counter(number, decimal);
+    font-family: "NanumEB";
+    font-size: 45px;
+    font-style: italic;
+    text-shadow: 5px 5px 1px #aaa;
 }
 #choice img{
     width: 100px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 7px #777;
+    margin: 0 10px;
 }
+.choiceTitle{
+    position: absolute;
+    top: 30px;
+    left: 160px;
+    display: inline-block;
+    width: 150px;
+    /* border: 1px solid navy; */
+    font-family: "NanumB";
+    font-size: 20px;
+}
+.choiceText{
+    position: absolute;
+    width: 200px;
+    top: 70px;
+    border: 1px solid navy;
+}
+
+
+
+
 /* * * * * #ticket영역 * * * * */
-
+#ticket{
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+    border: 1px solid navy;
+}
 /* * * * * #community영역 * * * * */
-
+#community{
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+    border: 1px solid navy;
+}
 /* * * * * #topic영역 * * * * */
+#topic{
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+    border: 1px solid navy;
+}
