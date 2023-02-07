@@ -6,12 +6,11 @@
     position: relative;
     width: 100%;
     height: 900px;
-    border: 1px solid navy;
-    background-color: rgb(26, 23, 23);
+    background-color: rgb(0, 0, 0);
 }
 h2{
     position: absolute;
-    border: 3px solid red;
+    border: 3px solid #780101;
     width: 500px;
     height: 150px;
     left: 50%;
@@ -22,31 +21,146 @@ h2{
     font-family: "NanumEB";
     font-weight: bold;
     font-size: 50px;
-    color: red;
+    color: #990101; /* 이 부분 색은 나중에 다시*/
 }
+/* w전구w */
+.bulbBox{
+    display: flex;
+    position: relative;
+    width: 500px;
+    left: 50%;
+    top: 30px;
+    margin-left: -255px;
+}
+.bulb{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 2;
+    background: #fff;
+    box-shadow: 0 0 50px hsl(0, 0%, 100%), 0 0 100px hsl(55, 100%, 95%), 0 0 150px hsl(51, 100%, 99%);
+}
+.bulb::before{
+    background: #fff;
+}
+.bulb::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 40px;
+    background: #fff171;
+    border-radius: 50%;
+    filter: blur(40px);
+}
+.bulb1{ left: 0px;}
+.bulb2{ left: 120px;}
+.bulb3{ left: 240px;}
+.bulb4{ left: 360px;}
+.bulb5{ left: 480px;}
+.bulb6{ top: 130px; left: 0px;}
+.bulb7{ top: 130px; left: 120px;}
+.bulb8{ top: 130px; left: 240px;}
+.bulb9{ top: 130px; left: 360px;}
+.bulb10{ top: 130px; left: 480px;}
+
 #h2S{
     font-family: "NanumB";
     font-weight: normal;
     color: #fff;
 }
-#nowShowing>ul{
+/* * * 슬라이드 영역 * * */
+.wrap{
     position: relative;
+    width: 200px;               /* .item의 width랑 맞춰야 함. */
+    height: 400px;
     margin: 0 auto;
-    /* white-space: nowrap;
-    overflow: hidden; */
+    perspective: 900px;         /* 깊이감 */
+    top: 500px;
 }
-#nowShowing li{
-    position: relative;
-    float: left;
-    margin: 10px;
-    top: 300px;
-    width: 160px;
-}
-#nowShowing img{
-    position: relative;
+.carousel{
+    position: absolute;
+    height: 100%;
     width: 100%;
-    margin-right: 10px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    /* border: 1px solid yellow; */
 }
+.item{
+    position: absolute;
+    display: block;
+    width: 200px;
+    border-radius: 10px;
+    /* border: 1px solid red; */
+}
+.item img{
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    height: 70%;
+}
+.carousel-item:nth-child(1) {
+    transform: rotateY(0deg) translateZ(350px);
+}
+
+.carousel-item:nth-child(2) {
+    transform: rotateY(36deg) translateZ(350px);
+}
+
+.carousel-item:nth-child(3) {
+    transform: rotateY(72deg) translateZ(350px);
+}
+
+.carousel-item:nth-child(4) {
+    transform: rotateY(108deg) translateZ(350px);
+}
+
+.carousel-item:nth-child(5) {
+    transform: rotateY(144deg) translateZ(350px);
+}
+
+.carousel-item:nth-child(6) {
+    transform: rotateY(180deg) translateZ(350px);
+}
+
+.carousel-item:nth-child(7) {
+    transform: rotateY(216deg) translateZ(350px);
+}
+
+.carousel-item:nth-child(8) {
+    transform: rotateY(252deg) translateZ(350px);
+}
+
+.carousel-item:nth-child(9) {
+    transform: rotateY(288deg) translateZ(350px);
+}
+
+.carousel-item:nth-child(10) {
+    transform: rotateY(324deg) translateZ(350px);
+}
+.next, .prev {
+    color: #444;
+    position: absolute;
+    top: 300px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #CCC;
+    border-radius: 5px;
+}
+
+.next {
+    right: 5em;
+    top: 700px;
+}
+
+.prev {
+    left: 5em;
+    top: 700px;
+}
+
 
 /* * * * * #choice영역 * * * * */
 #choice{
@@ -55,6 +169,7 @@ h2{
     height: 1000px;
     margin: 0 auto;
     border: 1px solid navy;
+    
 }
 h3{
     position: absolute;
@@ -67,13 +182,6 @@ h3{
     font-size: 30px;
     text-align: center;
     z-index: 10;
-}
-#choice .line{
-    position: absolute;
-    border: 1px solid #ccc;
-    top: 60px;
-    width: 100%;
-    height: 0px;
 }
 #choice section{
     position: relative;
