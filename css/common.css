@@ -34,16 +34,22 @@ nav{
     position: relative;
     width: 1000px;
     height: 50px;
-    top: 120px;
+    top: 80px;
     margin: 0 auto;
     text-align: center;
+    border: 1px solid #fff;
+    clear: both;
 
 }
 #tMenu>li>a{
     text-align: center;
     line-height: 50px;
+    font-size: 1.2em;
 }
-#tMenu li{
+#tMenu>li:hover>a{
+    text-shadow: 0 0 10px #fff171;
+}
+#tMenu>li{
     float: left;
     width: 25%;
     text-align: center;
@@ -53,10 +59,51 @@ nav{
     color: #fff;
 }
 .tMenuSecond{
+    /* display: none; */
+    position: absolute;
+    display: inline-block;
+    width: 500px;
+    /* border: 1px solid yellow; */
+    clear: both;
+}
+.tMenuInfo .tMenuSecond{
+    left: -60px;
+    top: 60px;
     display: none;
 }
+.tMenuBooking .tMenuSecond{
+    left: 125px;
+    top: 60px;
+    display: none;
+}
+.tMenuCommu .tMenuSecond{
+    width: 900px;
+    left: 180px;
+    top: 60px;
+    display: none;
+}
+.tMenuMy .tMenuSecond{
+    left: 750px;
+    top: 60px;
+}
+
+.tMenuSecond li{
+    display: inline-block;
+    /* border: 1px solid #fff; */
+}
+.tMenuSecond li::after{
+    content: "·";
+    color: #fff;
+}
+.tMenuSecond li:last-child::after{
+    content: "";
+}
 .tMenuSecond a{
-    /* text-align: center; */
+    text-align: center;
+    padding: 0 10px;
+    margin: 0;
+    /* display: inline-block; */
+    /* width: 200px; */
 }
 /*내 정보 영역. 로그인 하면 로그인 대신 보임*/
 #login{

@@ -10,7 +10,7 @@
 }
 h2{
     position: absolute;
-    border: 3px solid #780101;
+    /* border: 3px solid #780101; */
     width: 500px;
     height: 150px;
     left: 50%;
@@ -22,6 +22,7 @@ h2{
     font-weight: bold;
     font-size: 50px;
     color: #990101; /* 이 부분 색은 나중에 다시*/
+    /* text-shadow: 0 0 20px rgb(255, 255, 142), 0 0 50px #fff, 0 0 100px #fff; */
 }
 /* w전구w */
 .bulbBox{
@@ -75,11 +76,11 @@ h2{
 /* * * 슬라이드 영역 * * */
 .wrap{
     position: relative;
-    width: 200px;               /* .item의 width랑 맞춰야 함. */
+    width: 250px;               /* .item의 width랑 맞춰야 함. */
     height: 400px;
     margin: 0 auto;
     perspective: 900px;         /* 깊이감 */
-    top: 500px;
+    top: 450px;
 }
 .carousel{
     position: absolute;
@@ -92,7 +93,7 @@ h2{
 .item{
     position: absolute;
     display: block;
-    width: 200px;
+    width: 250px;
     border-radius: 10px;
     /* border: 1px solid red; */
 }
