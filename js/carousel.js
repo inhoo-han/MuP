@@ -1,6 +1,7 @@
 
-/* carousel 영역 */
+
 $(function() {
+    /* carousel 영역 */
     let carousel = $(".carousel");
     let carousel_item = $(".carousel-item");
     let currdeg = 0;
@@ -30,4 +31,8 @@ $(function() {
         }, 1000);
         // $(this).css('width', '100%');
     });
+
+    /* bulb 영역 */
+    $('.bulb').show({}, 3000, 'pulsate');
 });
+

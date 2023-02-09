@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="js/carousel.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 </head>
 <body>
     <div id="container">
@@ -142,72 +143,61 @@
         <div id="choice">
             <h3>뮤프의 선택</h3>
             <section>
-                <!-- 뮤프의 선택 > 상영중 -->
+                <!-- 뮤프의 선택 > 상영중 -->           
                 <article class="choiceNow">
                     <h4>상영 중</h4>
-                    <ol>
-                        <li><a href="#">
-                            <img src="images/poster01.gif" alt="스위니토드 포스터">
-                            <span class="choiceTitle">스위니토드</span>
-                            <span class="choiceText">굉장한 쇼다, 섬뜩하고 잔인하게 독창적이다
-                                가낟라ㅏ마바사아자차카타파하너아러더러머버서어저처커터퍼허
-                            </span>
-                        </a></li>
-                        <li><a href="#">
-                            <img src="images/poster02.gif" alt="마틸다 포스터">
-                            <span class="choiceTitle">마틸다</span>
-                            <span class="choiceText">마틸다 설명</span>
-                        </a></li>
-                        <li><a href="#">
-                            <img src="images/poster03.gif" alt="물랑루즈 포스터">
-                            <span class="choiceTitle">물랑루즈</span>
-                            <span class="choiceText">물랑루즈 설명</span>
-                        </a></li>
-                        <li><a href="#">
-                            <img src="images/poster04.gif" alt="웨스트 사이드 스토리 포스터">
-                            <span class="choiceTitle">West Side Story</span>
-                            <span class="choiceText">웨사스 설명</span>
-                        </a></li>
-                        <li><a href="#">
-                            <img src="images/poster05.gif" alt="맘마미아 포스터">
-                            <span class="choiceTitle">맘마미아</span>
-                            <span class="choiceText">맘마미아 설명</span>
-                        </a></li>
-                    </ol>
-                    <p class="more">more</p>
+                    <div class="fourCutFrame">
+                        <img class="frame" src="images/ranking_outside_nobackground.png" alt="frame">
+                    </div>
+                    <div class="choice rank">
+                        <ol>
+                            <li><a href="#">
+                                <img src="images/poster01.gif" alt="스위니토드 포스터">
+                                <span class="choiceTitle">스위니토드</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="images/poster02.gif" alt="마틸다 포스터">
+                                <span class="choiceTitle">마틸다</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="images/poster03.gif" alt="물랑루즈 포스터">
+                                <span class="choiceTitle">물랑루즈</span>
+                            </a></li>
+                            <li><a href="#">
+                                <img src="images/poster04.gif" alt="웨스트 사이드 스토리 포스터">
+                                <span class="choiceTitle">West Side Story</span>
+                            </a></li>
+                        </ol>
+                        <p class="more">more</p>
+                    </div>
                 </article>
                 <!-- 뮤프의 선택 > 상영예정 -->
                 <article class="choiceExpect">
                     <h4>상영 예정</h4>
+                    <div class="fourCutFrame">
+                        <img class="frame" src="images/ranking_outside_nobackground.png" alt="frame">
+                    </div>
                     <ol>
                         <li><a href="#">
                             <img src="images/poster06.gif" alt="영웅 포스터">
                             <span class="choiceTitle">영웅</span>
-                            <span class="choiceText">영웅 설명</span>
                         </a></li>
                         <li><a href="#">
                             <img src="images/poster07.gif" alt="오페라의 유령 포스터">
                             <span class="choiceTitle">오페라의 유령</span>
-                            <span class="choiceText">오페라의 유령 설명</span>
                         </a></li>
                         <li><a href="#">
                             <img src="images/poster08.gif" alt="드라큘라">
                             <span class="choiceTitle">드라큘라</span>
-                            <span class="choiceText">드라큘라 설명</span>
                         </a></li>
                         <li><a href="#">
                             <img src="images/poster09.gif" alt="데미안 포스터">
                             <span class="choiceTitle">데미안</span>
-                            <span class="choiceText">데미안 설명</span>
-                        </a></li>
-                        <li><a href="#">
-                            <img src="images/poster10.gif" alt="이프덴 포스터">
-                            <span class="choiceTitle">이프덴</span>
-                            <span class="choiceText">이프덴 설명</span>
                         </a></li>
                     </ol>
                     <p class="more">more</p>
                 </article>
+                
             </section>
         </div>
         <!---------- [E] #choice영역 ---------->
