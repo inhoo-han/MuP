@@ -152,17 +152,14 @@ h2{
     background: #CCC;
     border-radius: 5px;
 }
-
 .next {
     right: 5em;
     top: 700px;
 }
-
 .prev {
     left: 5em;
     top: 700px;
 }
-
 
 /* * * * * #choice영역 * * * * */
 #choiceArea{
@@ -332,6 +329,46 @@ article:last-child{
     margin-left: 60px;
     background: rgba(255, 255, 255, 1);
     border-radius: 10px;
+    padding: 20px;
+}
+#community aside h4{
+    font-family: "NanumEB";
+    color: #333;
+}
+.comReview{
+    position: relative;
+    height: 300px;
+    /* top:  */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+.comReview p{
+    position: absolute;
+    font-family: "Nanum";
+    letter-spacing: -2px;
+    word-spacing: 3px;
+    line-height: 1.2em;
+    background: #ccc;
+    bottom: 0;
+    padding: 20px;
+}
+.comReview .comReviewTitle{
+    border-radius: 3px 3px 0 0 ;
+    top: 100px;
+}
+.comReview .comReviewText:after{
+    border: 1px solid #111;
+}
+.comReview .comReviewText{
+    border-radius: 0 0 3px 3px;
+}
+.comReview img{
+    position: absolute;
+    top: 40px;
+    left: 140px;
+    width: 100px;
+    border-radius: 30px;
+    box-sizing: 0 0 30px #000;
 }
 /* * * * * #topic영역 * * * * */
 #topicArea{
