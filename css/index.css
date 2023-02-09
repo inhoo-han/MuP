@@ -165,12 +165,13 @@ h2{
 
 
 /* * * * * #choice영역 * * * * */
-#choice{
+#choiceArea{
     position: relative;
-    width: 1080px;
+    width: 100%;
     height: 1000px;
     margin: 0 auto;
-    border: 1px solid navy;
+    /* border: 1px solid navy; */
+    background: linear-gradient(135deg, #000 0%, #000 50%,/*#fff171 50%, #fff171 55%,*/ #780101 50%, #990101 55%, #777 55%, #777 100%);
 }
 h3{
     position: absolute;
@@ -181,42 +182,165 @@ h3{
     top: 50px;
     font-family: "NanumEB";
     font-size: 30px;
+    font-weight: bold;
     text-align: center;
     z-index: 10;
+    color: #fff
 }
 section{
     position: relative;
+    width: 1080px;
+    margin: 0 auto;
 }
 article{
+    position: absolute;
+    /* border: 1px solid red; */
+    top: 200px;
+}
+article:last-child{
+    left: 600px;
+}
+.choiceTitle{
     position: relative;
+    width: 200px;
+    top: 50px;
+    left: 20px;
+    z-index: 20;
+}
+.choiceTitle .bulb{
+    position: absolute;
+    top: 0;
+}
+.choiceTitle .bulb:last-child{
+    right: 0;
+}
+.choiceTitle h4{
+    position: relative;
+    color: #fff;
+    font-size: 1.2em;
+    width: 200px;
+    text-align: center;
+
 }
 .frame{
     position: absolute;
     width: 450px;
-    ;
+    z-index: 10;
 }
-.
+.choiceRank img{
+    position: relative;
+    width: 200px;
+}
+.choiceRank li:nth-child(1) img{
+    left: 20px;
+    top: 130px;
+}
+.choiceRank li:nth-child(2) img{
+    left: 20px;
+    top: 120px;
+}
+.choiceRank li:nth-child(3) img{
+    left: 230px;
+    top: -520px;
+}
+.choiceRank li:nth-child(4) img{
+    left: 230px;
+    top: -530px;
+}
+/* hover하면 이미지가 살짝 작게보이는 이벤트 하고싶었는데
+테두리가 다 가리고 있어서 안 된다.. 링크도 안 걸림..
+서터레스. 틀 따로 만들던가 해야됨.^^*/
+/* .choiceRank :hover{
+    width: 190px;
+} */
 
-
-
-
+/* * * more여깄다. * * */
+.more{
+    /* color: #fff; */
+    position: absolute;
+    top: 0;
+    text-align: center;
+}
+.more a::after{
+    font-family: "webIcon";
+    content: "p";
+}
+.choiceRank .more{
+    top: 650px;
+    left: 370px;
+    z-index: 30;
+    /* border: 1px solid yellow; */
+}
+.choiceRank .more a{
+    color: #ccc;
+    /* border: 1px solid yellow; */
+    padding: 10px;
+}
 /* * * * * #ticket영역 * * * * */
+#ticketArea{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+    background: linear-gradient(45deg, #fff 0%, #fff 50%,/*#fff171 50%, #fff171 55%,*/ #780101 50%, #990101 55%, #777 55%, #777 100%);
+}
 #ticket{
     position: relative;
     width: 1080px;
     height: 1000px;
     margin: 0 auto;
     border: 1px solid navy;
+
 }
+
+
 /* * * * * #community영역 * * * * */
+#communityArea{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+    border: 1px solid navy;
+    background: linear-gradient(135deg, #fff 0%, #fff 50%,/*#fff171 50%, #fff171 55%,*/ #990101 50%, #780101 55%, #000 55%, #000 100%);
+}
 #community{
     position: relative;
     width: 1080px;
     height: 1000px;
     margin: 0 auto;
     border: 1px solid navy;
+    padding: 60PX;
+}
+#community h3{
+    color: #000;
+    font-weight: bold;
+}
+#freeBoard{
+    position: relative;
+    width: 600px;
+    height: 700px;
+    border: 1px solid salmon;
+    top: 150px;
+}
+#community aside{
+    position: relative;
+    width: 300px;
+    height: 700px;
+    top: -550px;
+    left: 600px;
+    border: 1px solid slateblue;
+    margin-left: 60px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
 }
 /* * * * * #topic영역 * * * * */
+#topicArea{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+    /* border: 1px solid navy; */
+}
 #topic{
     position: relative;
     width: 1080px;
