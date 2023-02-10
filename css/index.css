@@ -224,6 +224,12 @@ article:last-child{
     width: 450px;
     z-index: 10;
 }
+.choiceRank{
+    position: relative;
+    background-color: yellow;
+    width: 450px;
+    height: 680px;
+}
 .choiceRank img{
     position: relative;
     width: 200px;
@@ -257,21 +263,34 @@ article:last-child{
     position: absolute;
     top: 0;
     text-align: center;
+    padding: 5px 5px 5px 10px; 
+    z-index: 30;
+    /* border: 1px solid yellow; */
+    /* border: 3px solid #333; */
+    box-shadow: 3px 3px 0px #333;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #990101 0%, #780101 100%);
+    transition-property: margin-left, margin-top, box-shadow;
+    transition-duration: 0.2s;
+}
+.more:hover{
+    margin-left: 3px;
+    margin-top: 3px;
+    box-shadow: none;
+    background: linear-gradient(to bottom, #780101 0%, #990101 100%);
+}
+.more a{
+    color: #ccc;
+    /* border: 1px solid yellow; */
 }
 .more a::after{
     font-family: "webIcon";
     content: "p";
 }
 .choiceRank .more{
-    top: 650px;
-    left: 370px;
-    z-index: 30;
+    top: 620px;
+    left: 355px;
     /* border: 1px solid yellow; */
-}
-.choiceRank .more a{
-    color: #ccc;
-    /* border: 1px solid yellow; */
-    padding: 10px;
 }
 /* * * * * #ticket영역 * * * * */
 #ticketArea{
@@ -325,7 +344,7 @@ article:last-child{
     height: 700px;
     top: -550px;
     left: 660px;
-    border: 1px solid slateblue;
+    /* border: 1px solid slateblue; */
     margin-left: 30px;
     background: rgba(255, 255, 255, 1);
     border-radius: 10px;
@@ -337,43 +356,105 @@ article:last-child{
 }
 .comReview{
     position: relative;
-    height: 300px;
+    height: 280px;
     /* top:  */
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
 }
 .comReview p{
     position: absolute;
+    bottom: 0;
     width: 100%;
     font-family: "NanumR";
     letter-spacing: -1px;
     word-spacing: 5px;
     text-align: justify;
-    line-height: 1.2em;
-    background: linear-gradient(#ccc 0%, #dcdccc 100%);
-    bottom: 0;
     padding: 20px;
+    /* box-shadow: 3px 3px 3px #555; */
 }
-/*체크:라인넣는거 다시 생각해보기*/
 .comReview .comReviewTitle{
-    border-radius: 3px 3px 0 0 ;
-    top: 100px;
-    padding-top: 30px;
+    position: relative;
+    border-radius: 3px;
+    top: 79px;
+    height: 80px;
+    padding: 0 10px;
+    /* padding-top: 30px; */
+    border: 3px solid #780101;
+    line-height: 80px;
+    border-bottom: 3px dashed #780101;
+    background-image: linear-gradient(135deg, #fff 0%, #ddd 0%, #fff 0%, #fff 100% );
+    /* transition: background-image 1s; */
+    z-index: 1;
+}
+.comReview .comReviewTitle:before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(
+        135deg,
+        /*#fff 0%, #fff 10%,*/
+        #aaa 0%, #ddd 15%, 
+        #fff 15%, #fff 100%
+    );
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+
+}
+.comReview:hover .comReviewTitle::before{
+    opacity: 1;
+    /* background-image: linear-gradient(
+        to bottom,
+        #fff 0%, #fff 10%,
+        #aaa 10%, #ddd 15%, 
+        #fff 15%, #fff 100%
+        ); */
+    /* background: wheat; */
 }
 .comReview .comReviewText{
-    border-top: 1px solid #555;
-    border-radius: 0 0 3px 3px;
+    border-radius: 3px;
+    /* background: linear-gradient(#ccc 0%, #fff 100%); */
+    border: 3px solid #000;
+    line-height: 1.2em;
+    border-top: none;
 }
-.comReview .comReviewText::before{
-    border-top: 1px solid #555;
-}
-.comReview img{
+.comReview .asideImage{
     position: absolute;
-    top: 30px;
+    top: 10px;
     left: 160px;
-    width: 100px;
+    width: 99px;
+    height: 131px;
     border-radius: 30px;
     box-shadow: 3px 3px 3px #555;
+    /* background-color: #fff; */
+    /* border: 1px solid navy; */
+    overflow: hidden;
+    z-index: 10;
+}
+.comReview img{
+    position: relative;
+    max-width: 100%;
+    border-radius: 30px;
+    /* box-shadow: 3px 3px 3px #555; */
+    transition: all 1s;
+}
+.comReview img:hover{
+    transform: scale(1.1);
+}
+aside>.more{
+    /* height: 30px; */
+    right: 20px;
+    top: 660px;
+    /* border: 1px solid navy; */
+    margin-left: -15px;
+    margin-top: -10px;
+}
+aside>.more:hover{
+    margin-left: 0px;
+    margin-top: -7px;
 }
 /* * * * * #topic영역 * * * * */
 #topicArea{
