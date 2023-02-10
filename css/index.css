@@ -306,7 +306,7 @@ article:last-child{
     height: 1000px;
     margin: 0 auto;
     border: 1px solid navy;
-    padding: 60PX;
+    padding: 30PX;
 }
 #community h3{
     color: #000;
@@ -314,19 +314,19 @@ article:last-child{
 }
 #freeBoard{
     position: relative;
-    width: 600px;
+    width: 660px;
     height: 700px;
     border: 1px solid salmon;
     top: 150px;
 }
 #community aside{
     position: relative;
-    width: 300px;
+    width: 330px;
     height: 700px;
     top: -550px;
-    left: 600px;
+    left: 660px;
     border: 1px solid slateblue;
-    margin-left: 60px;
+    margin-left: 30px;
     background: rgba(255, 255, 255, 1);
     border-radius: 10px;
     padding: 20px;
@@ -344,31 +344,36 @@ article:last-child{
 }
 .comReview p{
     position: absolute;
-    font-family: "Nanum";
-    letter-spacing: -2px;
-    word-spacing: 3px;
+    width: 100%;
+    font-family: "NanumR";
+    letter-spacing: -1px;
+    word-spacing: 5px;
+    text-align: justify;
     line-height: 1.2em;
-    background: #ccc;
+    background: linear-gradient(#ccc 0%, #dcdccc 100%);
     bottom: 0;
     padding: 20px;
 }
+/*체크:라인넣는거 다시 생각해보기*/
 .comReview .comReviewTitle{
     border-radius: 3px 3px 0 0 ;
     top: 100px;
-}
-.comReview .comReviewText:after{
-    border: 1px solid #111;
+    padding-top: 30px;
 }
 .comReview .comReviewText{
+    border-top: 1px solid #555;
     border-radius: 0 0 3px 3px;
+}
+.comReview .comReviewText::before{
+    border-top: 1px solid #555;
 }
 .comReview img{
     position: absolute;
-    top: 40px;
-    left: 140px;
+    top: 30px;
+    left: 160px;
     width: 100px;
     border-radius: 30px;
-    box-sizing: 0 0 30px #000;
+    box-shadow: 3px 3px 3px #555;
 }
 /* * * * * #topic영역 * * * * */
 #topicArea{
