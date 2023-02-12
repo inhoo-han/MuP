@@ -387,7 +387,7 @@ article:last-child{
 }
 td.fBTitle:hover{
     text-decoration: underline;
-    text-decoration-color: red;
+    text-decoration-color: #555;
 }
 .fBAuthor{
     width: 100px;
