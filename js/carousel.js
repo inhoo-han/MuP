@@ -19,16 +19,16 @@ $(function() {
     let st = setInterval(() => {
         currdeg = currdeg + 36;
         carousel.css("transform", "rotateY(" + currdeg + "deg)");
-    }, 1000);
+    }, 3000);
 
     $('.item').hover(function() {
         clearInterval(st);
-        // $(this).css('width', '103%');
+        $(this).css('transform') + $(this).css('transform','scale(1.1)');
     }, function () {
         st = setInterval(() => {
             currdeg = currdeg + 36;
             carousel.css("transform", "rotateY(" + currdeg + "deg)");
-        }, 1000);
+        }, 3000);
         // $(this).css('width', '100%');
     });
 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        .main_content{
+            position: relative;
+            width: 1200px;
+            height: 700px;
+            left: 300px;
+            top: 300px;
+            background-color: black;
+        }
+        .poster{
+            position : absolute;
+            left: 500px;
+            top: 200px;
+        }
+        .poster>img{
+            border: 1px solid #fff;
+        }
+        .closed{
+            overflow: hidden;
+            border: 1px solid black;
+            height: 700px;
+        }
+        .closed>img{
+            position: relative;
+            width: 1200px;
+            height: 700px;
+        }
+        .open{
+            position: absolute;
+            border: 1px dashed green;
+            top:0;
+            height: 700px;
+            overflow: hidden;
+        }
+        .open>img{
+            position: relative;
+            display: none;
+            width: 1200px;
+            top: -700px;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('.closed>img').on('click',function(){
+                $(this).animate({
+                    top : -700
+                },2000,"linear",function(){
+                    $(this).css('display','none')
+                    $('.open>img').css('display','block').animate({
+                        top: 0
+                    },3000,'linear')
+                })
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="main_content">
+        <div class="poster">
+            <img src="images/mov12.jpg" alt="">
+        </div>
+        <div class="closed">
+            <img src="images/ex/c_closed.png" alt="">
+        </div>
+        <div class="open">
+            <img src="images/ex/c_open.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
