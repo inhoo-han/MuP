@@ -1,6 +1,46 @@
 /* index */
 @charset "UTF-8";
 
+/* * * * * * * * * * 공통영역 * * * * * * * * */
+
+/* .more : 각 영역에서는 위치만 잡기(margin X)*/
+.more{
+    /* color: #fff; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    text-align: center;
+    padding: 5px 5px 5px 10px; 
+    z-index: 30;
+    /* border: 1px solid yellow; */
+    /* border: 3px solid #333; */
+    box-shadow: 3px 3px 0px #333;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #990101 0%, #780101 100%);
+    transition-property: margin-left, margin-top, box-shadow;
+    transition-duration: 0.2s;
+}
+.more:hover{
+    margin-left: 3px;
+    margin-top: 3px;
+    box-shadow: none;
+    background: linear-gradient(to bottom, #780101 0%, #990101 100%);
+}
+.more a{
+    color: #ccc;
+    /* border: 1px solid yellow; */
+}
+.more a::after{
+    font-family: "webIcon";
+    content: "p";
+}
+/* h4*/
+h4{
+    font-family: "NanumEB";
+    color: #333;
+}
+
 /* * * * * #nowShowing영역 * * * * */
 #nowShowing{
     position: relative;
@@ -226,7 +266,7 @@ article:last-child{
 }
 .choiceRank{
     position: relative;
-    background-color: yellow;
+    /* background-color: yellow; */
     width: 450px;
     height: 680px;
 }
@@ -257,36 +297,7 @@ article:last-child{
     width: 190px;
 } */
 
-/* * * more여깄다. * * */
-.more{
-    /* color: #fff; */
-    position: absolute;
-    top: 0;
-    text-align: center;
-    padding: 5px 5px 5px 10px; 
-    z-index: 30;
-    /* border: 1px solid yellow; */
-    /* border: 3px solid #333; */
-    box-shadow: 3px 3px 0px #333;
-    border-radius: 20px;
-    background: linear-gradient(to bottom, #990101 0%, #780101 100%);
-    transition-property: margin-left, margin-top, box-shadow;
-    transition-duration: 0.2s;
-}
-.more:hover{
-    margin-left: 3px;
-    margin-top: 3px;
-    box-shadow: none;
-    background: linear-gradient(to bottom, #780101 0%, #990101 100%);
-}
-.more a{
-    color: #ccc;
-    /* border: 1px solid yellow; */
-}
-.more a::after{
-    font-family: "webIcon";
-    content: "p";
-}
+
 .choiceRank .more{
     top: 620px;
     left: 355px;
@@ -316,7 +327,6 @@ article:last-child{
     width: 100%;
     height: 1000px;
     margin: 0 auto;
-    border: 1px solid navy;
     background: linear-gradient(135deg, #fff 0%, #fff 50%,/*#fff171 50%, #fff171 55%,*/ #990101 50%, #780101 55%, #000 55%, #000 100%);
 }
 #community{
@@ -324,20 +334,73 @@ article:last-child{
     width: 1080px;
     height: 1000px;
     margin: 0 auto;
-    border: 1px solid navy;
     padding: 30PX;
 }
 #community h3{
     color: #000;
     font-weight: bold;
 }
+/* 자유게시판 영역 */
 #freeBoard{
     position: relative;
     width: 660px;
     height: 700px;
-    border: 1px solid salmon;
+    padding: 20px;
+    /* border: 1px solid salmon; */
     top: 150px;
+    background-image: linear-gradient(135deg, #eee 0%,#fff 30%, #fff 100%);
+    border-radius: 10px;
 }
+#freeBoard table{
+    position: relative;;
+    width: 600px;
+    margin: 30px auto;
+    /* border: 3px solid #ccc; */
+    border-collapse: collapse;
+    border-radius: 3px;
+    border-style: hidden;
+    box-shadow: 0 0 0 3px #ccc;
+    font-family: "NanumR";
+    text-align: center;
+    line-height: 3em;
+}
+#freeBoard table th{
+    font-size: 1.1em;
+    color: #555;
+    font-weight: bold;
+    background-color: #eee;
+}
+#freeBoard table tr{
+    border-bottom: 3px dashed #eee;
+    background-color: #fff;
+}
+#freeBoard table tr:first-of-type{
+    border-bottom: none;
+}
+.fBNum{
+    width: 50px;
+    /* border: 1px solid navy; */
+}
+.fBTitle{
+    width: 450px;
+    /* border: 1px solid salmon; */
+}
+td.fBTitle:hover{
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+.fBAuthor{
+    width: 100px;
+    /* border: 1px solid yellow; */
+}
+#freeBoard .more{
+    /* right: 0px; */
+    top: 650px;
+    left: 550px;
+}
+
+
+/* 관람후기 영역*/
 #community aside{
     position: relative;
     width: 330px;
@@ -346,13 +409,9 @@ article:last-child{
     left: 660px;
     /* border: 1px solid slateblue; */
     margin-left: 30px;
-    background: rgba(255, 255, 255, 1);
+    background-image: linear-gradient(135deg, #eee 0%,#fff 30%, #fff 100%);
     border-radius: 10px;
     padding: 20px;
-}
-#community aside h4{
-    font-family: "NanumEB";
-    color: #333;
 }
 .comReview{
     position: relative;
@@ -446,28 +505,63 @@ article:last-child{
 }
 aside>.more{
     /* height: 30px; */
-    right: 20px;
-    top: 660px;
-    /* border: 1px solid navy; */
-    margin-left: -15px;
-    margin-top: -10px;
-}
-aside>.more:hover{
-    margin-left: 0px;
-    margin-top: -7px;
+    left: 220px;
+    top: 650px;
 }
 /* * * * * #topic영역 * * * * */
 #topicArea{
     position: relative;
     width: 100%;
-    height: 1000px;
+    height: 500px;
     margin: 0 auto;
     /* border: 1px solid navy; */
+    background-color: #fff;
 }
 #topic{
     position: relative;
     width: 1080px;
-    height: 1000px;
+    height: 100%;
     margin: 0 auto;
     border: 1px solid navy;
+    overflow: hidden;
+}
+#topicTicket{
+    position: relative;
+    width: 800px;
+    height: 300px;
+    margin: 0 auto;
+    top: 100px;
+    /* border: 1px solid #000; */
+    transform: rotate(10deg);
+    box-sizing: border-box;
+}
+/* 체크 티켓 저 땡땡이 어쩌냐.... ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ우ㅠ표냐???ㅠ */
+#topicTicketA{
+    float: left;
+    width: 550px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #93291E 0%, #ED213A 100%);
+    outline: 10px dotted #fff;
+    outline-offset: -5px;
+    transition: transform 1s;
+    border-radius: 20px;
+}
+#topicTicketB{
+    float: right;
+    width: 248px;
+    height: 100%;
+    background-color: #555;
+    opacity: 1;
+    transition: all 3s;
+    outline: 10px dotted #fff;
+    outline-offset: -5px;
+}
+/* 체크 지금은 hover로 설정주고 나중에 js로 가서 클릭이벤트 줄 것 */
+#topicTicket:hover #topicTicketA{
+    transform: rotate(-10deg) scale(1.1, 1.1);
+}
+#topicTicket:hover #topicTicketB{
+    transform: rotate(45deg) scale3d(0.7,0.7,0.3) translate(500px, 0px);
+    opacity: 0;
+
 }
