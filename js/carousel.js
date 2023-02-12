@@ -23,7 +23,6 @@ $(function() {
 
     $('.item').hover(function() {
         clearInterval(st);
-        $(this).css('transform') + $(this).css('transform','scale(1.1)');
     }, function () {
         st = setInterval(() => {
             currdeg = currdeg + 36;
