@@ -1,0 +1,8 @@
+http://talkerscode.com/webtricks/demo/demo_curtain-opening-effect-using-jquery-and-css.php
+커튼 좀 참고할 수 있을지도
+
+https://1924.tistory.com/277
+스크롤위치
+
+https://annotations.tistory.com/89
+함수만들어서 선택자 쓰고싶을 때 사용하는 방법

@@ -133,8 +133,8 @@
             </div>
         </div>
 
-        <div class="next">&RightArrow;</div>
-        <div class="prev">&LeftArrow;</div>
+        <div class="next"></div>
+        <div class="prev"></div>
         <!---------- [E] #nowShowing영역 ---------->
         <!---------- [S] #choice영역 ---------->
         <div id="choiceArea">
@@ -204,45 +204,99 @@
         <div id="ticketArea">
             <div id="ticket">
                 <h3>Ticket Chance!</h3>
+                <!-- 첫 번쨰, 뮤지컬 할인 박스  -->
                 <div id="ticketBox">
+                    <h4>Musical</h4>
+                    <div class="line"></div>
                     <div class="ticketSaleBox ticketSaleBox1">
                         <a href="#">
                             <span class="ticketText">
-                                <span>무슨할인 몇퍼</span>
-                                <b>뮤지컬 제목</b>
+                                <p>sale</p>
+                                <span>마티네 할인 30%</span>
+                                <b>청춘소음</b>
                             </span>
-                            <img src="images/poster10.gif" alt="포스터">
+                            <img src="images/poster14.gif" alt="포스터">
                         </a>
                     </div>
                     <div class="ticketSaleBox ticketSaleBox2">
                         <a href="#">
                             <span class="ticketText">
-                                <span>무슨할인 몇퍼</span>
-                                <b>뮤지컬 제목</b>
+                                <p>sale</p>
+                                <span>재관람 할인 30%</span>
+                                <b>일라이</b>
                             </span>
-                            <img src="images/poster10.gif" alt="포스터">
+                            <img src="images/poster13.gif" alt="포스터">
                         </a>
                     </div>
                     <div class="ticketSaleBox ticketSaleBox3">
                         <a href="#">
                             <span class="ticketText">
-                                <span>무슨할인 몇퍼</span>
-                                <b>뮤지컬 제목</b>
+                                <p>sale</p>
+                                <span>청소년 할인 20%</span>
+                                <b>디 오리지널 프렌치 뮤지컬</b>
                             </span>
-                            <img src="images/poster10.gif" alt="포스터">
+                            <img src="images/poster12.gif" alt="포스터">
                         </a>
                     </div>
                     <div class="ticketSaleBox ticketSaleBox4">
                         <a href="#">
                             <span class="ticketText">
-                                <span>무슨할인 몇퍼</span>
-                                <b>뮤지컬 제목</b>
+                                <p>sale</p>
+                                <span>재관람 할인 20%</span>
+                                <b>보이체크 인 더 다크</b>
                             </span>
-                            <img src="images/poster10.gif" alt="포스터">
+                            <img src="images/poster11.gif" alt="포스터">
                         </a>
                     </div>
+                    <p class="more"><a href="#">more</a></p>
                 </div>
-                <p class="more"><a href="#">more</a></p>
+                
+                <!-- 두 번째, 카드할인 박스  -->
+                <div id="ticketSpecialBox">
+                    <h4>Special Sale</h4>
+                    <div class="line"></div>
+                    <div class="ticketSaleBox ticketSaleBox1">
+                        <a href="#">
+                            <span class="ticketText">
+                                <p>sale</p>
+                                <span>SNS 할인 10%</span>
+                                <b>빵야</b>
+                            </span>
+                            <img src="images/poster15.gif" alt="포스터">
+                        </a>
+                    </div>
+                    <div class="ticketSaleBox ticketSaleBox2">
+                        <a href="#">
+                            <span class="ticketText">
+                                <p>sale</p>
+                                <span>MuP 회원 할인 20%</span>
+                                <b>마스터 피스 시리즈V</b>
+                            </span>
+                            <img src="images/poster16.gif" alt="포스터">
+                        </a>
+                    </div>
+                    <div class="ticketSaleBox ticketSaleBox3">
+                        <a href="#">
+                            <span class="ticketText">
+                                <p>sale</p>
+                                <span>프리뷰 할인 20%</span>
+                                <b>레드북</b>
+                            </span>
+                            <img src="images/poster17.gif" alt="포스터">
+                        </a>
+                    </div>
+                    <div class="ticketSaleBox ticketSaleBox4">
+                        <a href="#">
+                            <span class="ticketText">
+                                <p>sale</p>
+                                <span>R석 할인 30%</span>
+                                <b>미드나잇 : 앤틀러스</b>
+                            </span>
+                            <img src="images/poster18.gif" alt="포스터">
+                        </a>
+                    </div>
+                    <p class="more"><a href="#">more</a></p>
+                </div>
             </div>
         </div>
         <!---------- [E] #ticket영역 ---------->
@@ -346,8 +400,10 @@
                         <p class="topicHover">이번 주 뮤프 주제는? <span>마우스를 올려보세요</span></p>
                         <p class="topicTitle">나의 인생 뮤지컬은?</p>
                         <p class="topicText">뮤프 여러분들이 인생작으로 꼽는 뮤지컬을<br>소개해 주세요.</p>
+                        <div class="topicTicketAAfter">●●●●●●●●●●●●●●</div>
                     </div>
                     <div id="topicTicketB">
+                        <div class="topicTicketBBefore">●●●●●●●●●●●●●●</div>
                         <p></p>
                         <div id="barcode"></div>
                     </div>
