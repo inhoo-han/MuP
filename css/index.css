@@ -310,15 +310,59 @@ article:last-child{
     height: 1000px;
     margin: 0 auto;
     background: linear-gradient(45deg, #fff 0%, #fff 50%,/*#fff171 50%, #fff171 55%,*/ #780101 50%, #990101 55%, #777 55%, #777 100%);
+    /* box-sizing: border-box; */
 }
 #ticket{
     position: relative;
     width: 1080px;
     height: 1000px;
     margin: 0 auto;
-    border: 1px solid navy;
-
+    /* border: 1px solid navy; */
 }
+#ticket h3{
+    color: #f8b500; /* 체크 색깔*/
+    font-weight: bold;
+    /* text-shadow: 2px 2px 1px #fff; */
+}
+#ticketBox{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    top: 350px;
+    /* border: 1px solid #000; */
+}
+#ticketBox .ticketSaleBox{
+    position: relative;
+    float: left;
+    margin-right: 56px;
+    overflow: hidden;
+    /* width: px; */
+}
+#ticketBox .ticketSaleBox1{
+    margin-left: 56px;
+    width: 200px;
+}
+#ticketBox img{
+    width: 200px;
+}
+#ticketBox .ticketText{
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    padding-top: 200px;
+    font-family: "Nanum";
+    top: -180px;
+    left: -50px;
+}
+#ticketBox b{
+    display: block;
+    font-family: "Nanum";
+}
+
 
 
 /* * * * * #community영역 * * * * */
