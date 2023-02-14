@@ -16,19 +16,18 @@ $(function() {
         carousel.css("transform", "rotateY(" + currdeg + "deg)");
     });
 
-    let st = setInterval(() => {
-        currdeg = currdeg + 36;
-        carousel.css("transform", "rotateY(" + currdeg + "deg)");
-    }, 3000);
-
-    $('.item').hover(function() {
-        clearInterval(st);
-    }, function () {
-        st = setInterval(() => {
+    let nowst;
+    function moveNowShowing (){
+        nowst = setInterval(() => {
             currdeg = currdeg + 36;
             carousel.css("transform", "rotateY(" + currdeg + "deg)");
         }, 3000);
-        // $(this).css('width', '100%');
+    };
+    moveNowShowing();
+    $('.item').hover(function() {
+        clearInterval(nowst);
+    }, function () {
+        moveNowShowing();
     });
 
     /* bulb 영역 */
