@@ -1,2 +1,291 @@
 @charset "UTF-8";
 
+html, body{
+    height: 100%;
+}
+#lg_container{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+#lg_container h2{
+    display: none;
+}
+#lg_image, #lg_login, #lg_resister, #lg_find{
+    position: absolute;
+    width: 33.33%;
+    height: 100%;
+    /* border: 1px solid navy; */
+}
+
+/* * * * * #lg_image * * * * */
+#lg_image{
+    left: 0%;
+    background-image: url(../images/loginside.jpg);
+    background-position: 52%;
+    overflow: hidden;
+}
+#lg_image::before{
+    content: "";
+    background: linear-gradient(to bottom, #000, transparent);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 70%;
+}
+#lg_image h3{
+    color: rgba(225,225,225,0.3);
+    font-size: 11em;
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+#lg_image h3:nth-child(1){
+    display: inline;
+}
+#lg_image h3:nth-child(2){
+    display: inline;
+    display: none;
+}
+
+/* * * * * #lg_login * * * * */
+#lg_login{
+    left: 33.33%;
+    background-color: #fff;
+    z-index: 10;
+    border-right: 2px solid #ccc;
+}
+#lg_login h3{
+    /* display: none; */
+    position: relative;
+    top: 30%;
+    left: 10px;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #780101;
+}
+#lg_login h3::before{
+    position: absolute;
+    width: 5px;
+    left: -10px;
+    height: 25px;
+    top: -1px;
+    background-color: #780101;
+    content: "";
+}
+#lg_login .lg_login_inner{
+    position: relative;
+    /* border: 1px solid salmon; */
+    top: 25%;
+    padding: 10%;
+}
+#lg_login_form p{
+    margin: 30px 0;
+}
+#lg_login_form label{
+    visibility: hidden;
+}
+#lg_login_form input{
+    display: block;
+    width: 95%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 1px;
+    font-size: 1em;
+    padding: 10px;
+}
+#lg_login_form p>input:focus{
+    outline: none;
+    border-bottom: 2px solid #333;
+    transition: all 1s;
+}
+#lg_login_form .lg_btn{
+    position: relative;
+    margin: 50px 0;
+    width: 99%;
+    cursor: pointer;
+    border: none;
+    border-radius: 3%;
+}
+.lg_login_etc{
+    position: relative;
+    color: #333;
+    /* padding: 10px; */
+}
+.lg_login_etc span{
+    position: absolute;
+    margin-bottom: 10px;
+    font-size: 1em;
+    padding: 5px;
+    border-bottom: 2px solid #fff;
+    transition: border 1s;
+}
+.lg_login_etc span:nth-child(1){
+    left: 10px;
+}
+.lg_login_etc span:nth-child(2){
+    right: 10px;
+}
+.lg_login_etc span:hover{
+    border-bottom: 2px solid #333;
+}
+/* * * * * #lg_resister * * * * */
+#lg_resister{
+    left: 33.33%;
+    background-color: #fff;
+    border-right: 2px solid #ccc;
+}
+#lg_resister h3{
+    position: relative;
+    width: 80%;
+    left: 10px;
+    top: 12%;
+    margin: 0 auto;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #780101;
+}
+#lg_resister h3::before{
+    position: absolute;
+    width: 5px;
+    left: -10px;
+    height: 25px;
+    top: -1px;
+    background-color: #780101;
+    content: "";
+}
+#lg_resister .lg_resister_inner{
+    position: relative;
+    top: 11%;
+    padding: 10%;
+    /* border: 1px solid salmon; */
+}
+#lg_rs_form{
+
+}
+#lg_rs_form p{
+    margin: 30px 0;
+}
+#lg_rs_form label{
+    /* visibility: hidden; */
+}
+#lg_rs_form input{
+    display: block;
+    /* width: 95%; */
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 1px;
+    font-size: 14px;
+    padding: 10px;
+}
+#lg_rs_form p>input:focus, .lg_rs_telecomList:focus, #lg_rs_telNo:focus, #lg_rs_telNoCheck:focus{
+    outline: none;
+    border-bottom: 2px solid #333;
+    transition: all 1s;
+}
+#lg_rs_form .lg_btn{
+    position: relative;
+    margin: 50px 0;
+    width: 99%;
+    cursor: pointer;
+    border: none;
+    border-radius: 3%;
+}
+.lg_must{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    /* text-indent: -99px; */
+    /* border: 1px solid red; */
+}
+.lg_must::before{
+    content: "*";
+    color: red;
+}
+#lg_rs_form p{
+    position: relative;
+}
+#lg_rs_form p:nth-child(2) a{
+    position: absolute;
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 25px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    border: 3px solid #780101;
+    right: 3%;
+    bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.lg_rs_tel{
+    /* border: 1px solid salmon; */
+}
+/* input */
+#lg_rs_name, #lg_rs_email, #lg_rs_passWord, #lg_rs_passWordCheck{
+    width: 95%;
+}
+.lg_rs_telecomList_box{
+    position: relative;
+    top: -20px;
+    /* border: 1px solid navy; */
+    height: 40px;
+    overflow: hidden;
+}
+.lg_rs_telecomList{
+    float: left;
+    display: inline-block;
+    width: 25%;
+}
+#lg_rs_telNo{
+    float: right;
+    display: inline-block;
+    width: 60%;
+}
+.lg_rs_telNo_check{
+    position: relative;
+    /* border: 1px solid red; */
+    height: 40px;
+    margin: 30px 0;
+}
+#lg_rs_telNoCheck{
+    position: relative;
+    width: 95%;
+}
+.lg_rs_telNo_check .btn_telCheck{
+    position: absolute;
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 25px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    border: 3px solid #780101;
+    right: 3%;
+    bottom: -5px;
+    font-size: 15px;
+    font-weight: bold;
+    font: "NanumR";
+    padding: 0;
+}
+.btn_telCheck.lg_confirm{
+    display: none;
+}
+/* * * * * #lg_find * * * * */
+#lg_find{
+    left: 66.66%;
+    display: none;
+}

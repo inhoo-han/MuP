@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mup 로그인</title>
     <link rel="stylesheet" href="css/login.css">
-    <!-- <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
     <script src="js/jquery-3.6.3.min.js"></script>
     <script src="js/myScript.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -18,91 +17,110 @@
         <h2 class="hidden">로그인 및 회원가입 영역</h1>
         <!----- [S] 왼쪽 이미지 영역 ----->
         <div id="lg_image">
-            <h3 class="lg_image_title_login">Log-in</h2>
-            <h3 class="lg_image_title_resister">Resister Now</h2>
+            <h3 class="lg_image_title_login">Login</h3>
+            <h3 class="lg_image_title_resister">Resister Now</h3>
         </div>
         <!----- [E] 왼쪽 이미지 영역 ----->
         <!----- [S] 중앙 로그인 영역 ----->
         <div id="lg_login">
             <h3>로그인</h3>
-            <form action="#" method="post" id="lg_login_form">
-                <p>
-                    <label for="email">이메일</label>
-                    <input type="email" id="email" name="email" autocomplete="off" required>
+            <div class="lg_login_inner">
+                <form action="#" method="post" id="lg_login_form">
+                    <p>
+                        <label for="lg_lg_email">이메일</label>
+                        <input type="email" id="lg_lg_email" name="email" placeholder="이메일" autocomplete="off" required>
+                    </p>
+                    <p>
+                        <label for="lg_lg_passWord">비밀번호</label>
+                        <input type="password" id="lg_lg_passWord" name="passWord" placeholder="비밀번호" required>
+                    </p>
+                    <input class="lg_btn" type="submit" value="로그인" onclick="loginSuccess();">
+                </form>
+                <p class="lg_login_etc">
+                    <span class="lg_login_find"><a href="#">이메일/비밀번호 찾기</a></span>
+                    <span class="lg_login_joinUs"><a href="#">회원가입</a></span>
                 </p>
-                <p>
-                    <label for="passWord">비밀번호</label>
-                    <input type="password" id="passWord" name="passWord" placeholder="8자 이상 입력" required>
-                </p>
-                <input type="submit" value="로그인" onclick="loginSuccess();">
-            </form>
-            <p class="lg_login_find"><a href="#">이메일/비밀번호 찾기</a></p>
-            <p class="lg_login_joinUs"><a href="#">회원가입</a></p>
+            </div>
         </div>
         <!----- [E] 중앙 로그인 영역 ----->
         <!----- [S] 우측 회원가입 영역 ----->
         <div id="lg_resister">
             <h3>회원가입</h3>
-            <form action="#" method="post" id="lg_resister_form">
-                <p>
-                    <label for="name">이름</label>
-                    <input type="text" id="name" name="name" maxlength="8" required>
-                </p>
-                <p>
-                    <label for="email">이메일</label>
-                    <input type="email" id="email" name="email" autocomplete="off" required>
-                    <a href="#" class="emailCheck">중복확인</a>
-                </p>
-                <p>
-                    <label for="passWord">비밀번호<span>영어, 숫자 포함 8자 이상 입력하세요.</span></label>
-                    <input type="password" id="passWord" name="passWord" minlength="8" maxlength="16" required>
-                </p>
-                <p>
-                    <label for="passWordCheck">비밀번호 확인</label>
-                    <input type="password" id="passWordCheck" name="passWordCheck" minlength="8" maxlength="16" required>
-                </p>
-                <p>
-                    <label for="telNo">연락처</label>
-                    <input type="text" name="telecomList" list="telecomList" placeholder="통신사 선택">
-                    <datalist id="telecomList">
-                        <option value="KT"></option>
-                        <option value="U+"></option>
-                        <option value="SKT"></option>
-                        <option value="알뜰폰"></option>
-                    </datalist>
-                    <input type="tel" id="telNo" name="telNo" maxlength="11" placeholder=" - 없이 입력하세요" required>
-                    <label for="telNoCheck">인증번호 입력</label>
-                    <input type="number" max="999999" placeholder="인증번호" >
-                    <div class="lg_resister_btn_telCheck">
-                        <button class="btn_telCheck">인증받기</button>
-                        <button class="btn_telCheck_confirm">인증확인</button>
-                    </div>
-                </p>
-                <input type="submit" value="회원가입" onclick="resisterSuccess();">
+            <div class="lg_resister_inner">
+                <form action="#" method="post" id="lg_rs_form">
+                    <p>
+                        <label for="lg_rs_name">이름<span class="lg_must">필수</span></label>
+                        <input type="text" id="lg_rs_name" name="name" maxlength="8" required>
+                    </p>
+                    <p>
+                        <label for="lg_rs_email">이메일<span class="lg_must">필수</span></label>
+                        <input type="email" id="lg_rs_email" name="email" autocomplete="off" required>
+                        <a href="#" class="emailCheck">중복확인</a>
+                    </p>
+                    <p>
+                        <label for="lg_rs_passWord">비밀번호<span class="lg_must">필수</span><span></span></label>
+                        <input type="password" id="lg_rs_passWord" name="passWord" minlength="8" maxlength="16" placeholder="영어, 숫자 포함 8자 이상 입력하세요." required>
+                    </p>
+                    <p>
+                        <label for="lg_rs_passWordCheck">비밀번호 확인<span class="lg_must">필수</span></label>
+                        <input type="password" id="lg_rs_passWordCheck" name="passWordCheck" minlength="8" placeholder="" maxlength="16" required>
+                    </p>
+                    <p class="lg_rs_tel">
+                        <label for="lg_rs_telNo">연락처<span class="lg_must">필수</span></label>
+                        <div class="lg_rs_telecomList_box">
+                            <input class="lg_rs_telecomList" type="text" name="telecomList" list="telecomList" placeholder="통신사 선택">
+                            <datalist id="telecomList">
+                                <option value="KT"></option>
+                                <option value="U+"></option>
+                                <option value="SKT"></option>
+                                <option value="알뜰폰"></option>
+                            </datalist>
+                            <input type="tel" id="lg_rs_telNo" name="telNo" maxlength="11" placeholder=" - 없이 입력하세요" required>
+                        </div>
+                        <div class="lg_rs_telNo_check">
+                            <label for="lg_rs_telNoCheck">인증번호 입력</label>
+                            <input type="text" maxlength="6" id="lg_rs_telNoCheck" placeholder="인증번호" >
+                            <div class="lg_resister_btn_telCheck">
+                                <button class="btn_telCheck">인증받기</button>
+                                <button class="btn_telCheck lg_confirm">인증확인</button>
+                            </div>
+                        </div>
+                    </p>
+                    <input class="lg_btn" type="submit" value="회원가입" onclick="resisterSuccess();">
+                </div>
             </form>
         </div>
         <!----- [E] 우측 회원가입 영역 ----->
         <!----- [S] 우측(2) 아이디/비밀번호 찾기 영역 ----->
         <div id="lg_find">
-            <div id="lg_find_id">
+            <h3>이메일/비밀번호 찾기</h3>
+            <div id="lg_fd_id">
                 <h4>이메일 찾기</h4>
-                <form action="#" method="post" id="lg_find_id_form">
+                <form action="#" method="post" id="lg_fd_id_form">
                     <p>
-                        <label for="lg_find_id_telNo">전화번호 입력</label>
+                        <label for="lg_fd_id_telNo">전화번호 입력<span class="lg_must">필수</span></label>
                         <input type="text" name="telecomList" list="telecomList" placeholder="통신사 선택">
-                        <datalist id="telecomList">
-                            <option value="KT"></option>
-                            <option value="U+"></option>
-                            <option value="SKT"></option>
-                            <option value="알뜰폰"></option>
-                        </datalist>
-                        <input type="tel" id="telNo" name="telNo" maxlength="11" placeholder=" - 없이 입력하세요" required>
+                        <input type="tel" id="lg_fd_id_telNo" name="telNo" maxlength="11" placeholder=" - 없이 입력하세요" required>
+                        <label for="lg_fd_telNoCheck">인증번호 입력</label>
+                        <input type="number" max="999999" id="lg_fd_telNoCheck" placeholder="인증번호" >
+                        <div class="lg_fd_btn_telCheck">
+                            <button class="btn_telCheck">인증받기</button>
+                            <button class="btn_telCheck lg_confirm">인증확인</button>
+                        </div>
                     </p>
-                    <!-- ////////////////////여기서부터/////////////////////// -->
+                    <input class="lg_fd_id_submit" type="submit" value="회원가입" onclick="alert('가입하신 아이디는 helloworld@mup.co.kr 입니다.')">
                 </form>
             </div>
             <div id="lg_find_pw">
+                <h4>비밀번호 찾기</h4>
+                <form action="#" method="post" id="lg_fd_pw_form">
+                    <p>
+                        <label for="lg_fd_pw_email">이메일 입력<span class="lg_must">필수</span></label>
+                        <input type="email" name="lg_fd_pw_email" id="lg_fd_pw_email">
+                        <input class="lg_submit fd_pw" type="submit" value="이메일 전송" onclick="alert('입력하신 이메일 주소로 임시 비밀번호를 전송하였습니다.')">
 
+                    </p>
+                </form>
             </div>
         </div>
         <!----- [E] 우측(2) 아이디/비밀번호 찾기 영역 ----->

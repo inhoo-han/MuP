@@ -6,3 +6,6 @@ https://1924.tistory.com/277
 
 https://annotations.tistory.com/89
 함수만들어서 선택자 쓰고싶을 때 사용하는 방법
+
+23.02.15
+인증번호 영역과 상단의 간격이 맞지 않음을 확인. 낼 수정하자. ..
