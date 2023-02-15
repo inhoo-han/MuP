@@ -95,22 +95,22 @@ $(function() {
     });
 
     /* * * * * login.html영역 * * * * */
-    let Rsw = false;
-    $('.lg_login_joinUs').click(function() {
-        Rsw = !Rsw;
-        if(Rsw){
-            $('#lg_resister').animate({
-                left: '66.66%'
-            },1000);
-            $('.lg_image_title_resister').show(1000);
-            $('.lg_image_title_login').hide();
-        } else{
-            $('#lg_resister').animate({
-                left: '33.33%'
-            },1000);
-            $('.lg_image_title_resister').hide();
-            $('.lg_image_title_login').show(1000);
-        }
-    });
+    // let Rsw = false;
+    // $('.lg_login_joinUs').click(function() {
+    //     Rsw = !Rsw;
+    //     if(Rsw){
+    //         $('#lg_resister').animate({
+    //             left: '66.66%'
+    //         },1000);
+    //         $('.lg_image_title_resister').show(1000);
+    //         $('.lg_image_title_login').hide();
+    //     } else{
+    //         $('#lg_resister').animate({
+    //             left: '33.33%'
+    //         },1000);
+    //         $('.lg_image_title_resister').hide();
+    //         $('.lg_image_title_login').show(1000);
+    //     }
+    // });
 }); 
 
