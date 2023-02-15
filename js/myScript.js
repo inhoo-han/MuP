@@ -11,6 +11,26 @@ $(function() {
     //     setTimeout( function() { window.location = URL }, 500 );
     // }
 
+    /* curtain 영역 */
+    let scroll_top;
+    $(window).scroll(function(){
+        scroll_top=$(window).scrollTop();
+        console.log(scroll_top)
+        /* 큰 커튼 */
+        if(scroll_top>10 && scroll_top < 320){
+            $("#curtain").stop().animate({
+                top: -(scroll_top)*3
+            },1000);
+        }
+        /* 작은 커틐 */
+        if(scroll_top < 1200) {
+            $('.curtain_front').show('blind', 1000);
+        } else{
+            $('.curtain_front').hide('blind', 1000);
+        }
+
+    })
+
     /* carousel 영역 */
     let carousel = $(".carousel");
     let carousel_item = $(".carousel-item");
@@ -28,9 +48,12 @@ $(function() {
 
     let nowst;
     function moveNowShowing (){
-        nowst = setInterval(() => {
-            currdeg = currdeg + 36;
-            carousel.css("transform", "rotateY(" + currdeg + "deg)");
+        // nowst = setInterval(() => {
+        //     currdeg = currdeg + 36;
+        //     carousel.css("transform", "rotateY(" + currdeg + "deg)");
+        // }, 3000);
+        nowst = setInterval(function() {
+            $('.next').trigger('click');
         }, 3000);
     };
     moveNowShowing();
@@ -130,6 +153,14 @@ $(function() {
     });
     $('.lg_close').click(function() {
         $('.lg_login_joinUs').trigger('click');
+    });
+    let tCsw = false;
+    $('.lg_rs_btn_telCheck').click(function() {
+        if(tCsw){
+            $('.btn_telCheck.lg_confirm').hide();
+        } else{
+            $('.btn_telCheck.lg_confirm').show();
+        }
     });
 }); 
 

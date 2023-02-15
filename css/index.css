@@ -80,10 +80,14 @@ h4{
 
 /* * * * * #nowShowing영역 * * * * */
 #nowShowing{
-    position: relative;
+    position: fixed;
     width: 100%;
-    height: 900px;
+    height: 1000px;
     background-color: rgb(0, 0, 0);
+    /* background-image: url(../images/c_open.png); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 100% 100%;
 }
 /* w전구w */
 .bulbBox{
@@ -218,13 +222,13 @@ h4{
 }
 .next {
     background-position: 48% 15%;
-    right: 5em;
-    top: 700px;
+    left: 600px;
+    top: 50px;
 }
 .prev {
     background-position: 42% 15%;
-    left: 5em;
-    top: 700px;
+    left: -400px;
+    top: 50px;
 }
 
 /* * * * * #choice영역 * * * * */
@@ -232,7 +236,8 @@ h4{
     position: relative;
     width: 100%;
     height: 1000px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin: 1200px auto 0;
     /* border: 1px solid navy; */
     background: linear-gradient(135deg, #000 0%, #000 50%,/*#fff171 50%, #fff171 55%,*/ #780101 50%, #990101 55%, #777 55%, #777 100%);
 }
@@ -321,6 +326,7 @@ article:last-child{
     width: 100%;
     height: 1000px;
     margin: 0 auto;
+    background: #fff;
     /* background: linear-gradient(45deg, #fff 0%, #fff 50%, #780101 50%, #990101 55%, #777 55%, #777 100%); */
     box-sizing: border-box;
 }
@@ -484,6 +490,7 @@ article:last-child{
     color: #555;
     font-weight: bold;
     background-color: #eee;
+    text-align: center;
 }
 #freeBoard table tr{
     border-bottom: 3px dashed #eee;
@@ -494,10 +501,12 @@ article:last-child{
 }
 .fBNum{
     width: 50px;
-    /* border: 1px solid navy; */
+    /* border-right: 1px dashed navy; */
 }
 .fBTitle{
     width: 450px;
+    text-align: justify;
+    padding-left: 20px;
     /* border: 1px solid salmon; */
 }
 td.fBTitle:hover{

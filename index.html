@@ -17,48 +17,57 @@
         <!---------- [S] header영역 ---------->
         <header>
             <h1>뮤지컬 프로젝트</h1>
+            <div class="curtain_head">
+                <div id="curtain"></div>
+                <div class="curtain_front">
+                </div>
+            </div>
             <nav>
                 <!-- 탑메뉴 -->
-                <ul id="tMenu">
-                    <li class="tMenuInfo"><a href="#">공연정보</a>
-                        <ul class="tMenuSecond">
-                            <li><a href="#">진행중인 공연</a></li>
-                            <li><a href="#">티켓 오픈 예정</a></li>
-                            <li><a href="#">공연뉴스</a></li>
-                            <li><a href="#">공연장</a></li>
-                        </ul>
-                    </li>
-                    <li class="tMenuBooking"><a href="#">예매하기</a>
-                        <ul class="tMenuSecond">
-                            <li><a href="#">인기 순위</a></li>
-                            <li><a href="#">공연 검색</a></li>
-                            <li><a href="#">할인 티켓</a></li>
-                        </ul></li>
-                    <li class="tMenuCommu"><a href="#">커뮤니티</a>
-                        <ul class="tMenuSecond">
-                            <li><a href="#">뮤프니티</a></li>
-                            <li><a href="#">뮤블로그</a></li>
-                            <li><a href="#">나의 뮤지컬 취향 찾기</a></li>
-                            <li><a href="#">이벤트</a></li>
-                            <li><a href="#">공지사항</a></li>
-                        </ul></li>
-                    <li class="tMenuMy" id="login"><a href="login.html">로그인</a></li>
-                    <li class="tMenuMy" id="myInfo"><a href="#">내 정보</a>
-                        <ul class="tMenuSecond">
-                            <li><a href="#">알림</a></li>
-                            <li><a href="#">회원 정보</a></li>
-                            <li><a href="#">예매 내역</a></li>
-                            <li><a href="#">관심 목록</a></li>
-                        </ul>
-                    </li>        <!-- 나의 뮤프 -->
-                </ul>
-                <form action="#" id="search">
-                    <fieldset>
-                        <legend>검색영역</legend>
-                        <input type="search">
-                        <button type="submit" class="hidden"><img src="images/search.png" alt="검색버튼">검색</button>
-                    </fieldset>
-                </form>
+                <div id="tMenu_form">
+                    <ul id="tMenu">
+                        <li class="tMenuInfo"><a href="#">공연정보</a>
+                            <ul class="tMenuSecond">
+                                <li><a href="#">진행중인 공연</a></li>
+                                <li><a href="#">티켓 오픈 예정</a></li>
+                                <li><a href="#">공연뉴스</a></li>
+                                <li><a href="#">공연장</a></li>
+                            </ul>
+                        </li>
+                        <li class="tMenuBooking"><a href="#">예매하기</a>
+                            <ul class="tMenuSecond">
+                                <li><a href="#">인기 순위</a></li>
+                                <li><a href="#">공연 검색</a></li>
+                                <li><a href="#">할인 티켓</a></li>
+                            </ul></li>
+                        <li class="tMenuCommu"><a href="#">커뮤니티</a>
+                            <ul class="tMenuSecond">
+                                <li><a href="#">뮤프니티</a></li>
+                                <li><a href="#">뮤블로그</a></li>
+                                <li><a href="#">나의 뮤지컬 취향 찾기</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">공지사항</a></li>
+                            </ul></li>
+                        <li class="tMenuMy" id="login"><a href="login.html">로그인</a></li>
+                        <li class="tMenuMy" id="myInfo"><a href="#">내 정보</a>
+                            <ul class="tMenuSecond">
+                                <li><a href="#">알림</a></li>
+                                <li><a href="#">회원 정보</a></li>
+                                <li><a href="#">예매 내역</a></li>
+                                <li><a href="#">관심 목록</a></li>
+                            </ul>
+                        </li>        <!-- 나의 뮤프 -->
+                    </ul>
+                    <form action="#" id="search">
+                        <fieldset>
+                            <div class="like_fieldset">
+                                <legend>검색영역</legend>
+                                <input type="search">
+                                <button type="submit" class="hidden"><img src="images/search.png" alt="검색버튼">검색</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </nav>
         </header>
         <!---------- [E] header영역 ---------->
@@ -130,11 +139,10 @@
                         </a>
                       </div>
                 </div>
+                <div class="next"></div>
+                <div class="prev"></div>
             </div>
         </div>
-
-        <div class="next"></div>
-        <div class="prev"></div>
         <!---------- [E] #nowShowing영역 ---------->
         <!---------- [S] #choice영역 ---------->
         <div id="choiceArea">

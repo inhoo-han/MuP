@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        #wrap{
+            position: relative;
+            width: 100%;
+        }
+        .curtain_head{
+            position: relative;
+            width: 100%;
+            height: 1049px;
+            border: 1px solid red;
+            z-index: 100;
+        }
+        /* full반응형 변경시에는 header width 100%잡고 속성 다시 수정필요 */
+        #curtain{
+            position: relative;
+            width: 100%;
+            height: 1049px;
+            /* border: 1px solid red; */
+            margin: 0 auto;
+            top: 0;
+            box-sizing: border-box;
+            text-align: center;
+            background: url(../../커튼연습/images/ex/c_closed5.png) repeat-x;
+            z-index: 1;
+            
+        }
+        header > h1{
+            height: 250px;
+            font-size: 10em;
+            line-height: 1.7em;
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .curtain_front{
+            position: fixed;
+            width: 100%;
+            height: 200px;
+            border: 1px solid blue;
+            margin: 0 auto;
+            top: 0;
+            text-align: center;
+            box-sizing: border-box;
+            background: url(../../커튼연습/images/ex/curtain_front.png) repeat-x;
+            z-index: 1000;
+        }
+        .first > h2{
+            margin: 0;
+            height: 50px;
+            font-size: 2em;
+            line-height: 1.8em;
+        }
+        .content{
+            width: 100%;
+        }
+        .content_wrap{
+            padding-top: 310px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            background-color: #000;
+        }
+        .vid_form{
+            position: relative;
+            background-color: #999;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+        .vid_form > video{
+            width: 100%;
+            position: relative;
+        }
+        .main_content{
+            position: relative;
+            width: 100%;
+            background-color: blueviolet;
+            height: auto;
+        }
+        .prod{
+            position: relative;
+            margin: 0 auto;
+            width: 90%;
+        }
+        .prod_list{
+            position: relative;
+            display: flex;
+            margin: 0 auto;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .product{
+            width: 50%;
+            text-align: center;
+            height: 400px;
+        }
+        .product01{
+            position: relative;
+            margin: 50px 0;
+        }
+        .product01>img{
+            height: 100%;
+        }
+        .product02{
+            position: relative;
+            margin: 50px 0;
+        }
+        .product02>img{
+            height: 100%;
+        }
+        .foot{
+            position: relative;
+            width: 100%;
+            height: 150px;
+            background-color: black;
+        }
+        footer{
+            position: relative;
+            margin: 0 auto;
+            width: 90%;
+            text-align: center;
+            color: #fff;
+            top: 50px;
+        }
+    </style>
+    <script>
+        $(function(){
+            let scroll_top;
+            $(window).scroll(function(){
+                scroll_top=$(window).scrollTop();
+                console.log(scroll_top)
+                if(scroll_top>10 && scroll_top < 320){
+                    $("#curtain").animate({
+                        top: -(scroll_top)*2
+                    },100);
+                }
+            })
+        });
+        //작은메뉴 1차 50px
+        //큰메뉴 1차 250px
+        // content_wrap에서 10px 더 추가로 떨어짐 log 확인해서 수정필요
+    </script>
+</head>
+<body> 
+    <!-- 메뉴, 추가 컨텐츠 마크업 필요 -->
+    <div id="wrap">
+        <div class="curtain_head">
+            <div id="curtain"></div>
+            <div class="curtain_front">
+                <h2>curtain front</h2>
+            </div>
+        </div>
+        <div class="content_wrap">
+            <div class="content vid_form">
+                
+            </div>
+        </div>
+        <div class="content main_content">
+            <div class="prod">
+                <div class="prod_list">
+                    <div class="product product01">
+                        <img src="images/mov12.jpg" alt="샘플">
+                    </div>
+                    <div class="product product02">
+                        <img src="images/mov12.jpg" alt="샘플">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <footer>
+                저작권 조심..<br>
+                여기다가 더 적으시면 됩니다.
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
