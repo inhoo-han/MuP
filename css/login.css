@@ -19,20 +19,6 @@ html, body{
     height: 100%;
     /* border: 1px solid navy; */
 }
-/* .lg_topIcon*/
-.lg_close{
-    position: absolute;
-    background-image: url(../images/icons2.png);
-    width: 65px;
-    height: 25px;
-    background-position: 90% 15%;
-    /* border: 1px solid red; */
-    top: 20px;
-    right: 20px;
-    z-index: 10;
-    margin: 0;
-    padding: 0;
-}
 
 /* * * * * #lg_image * * * * */
 #lg_image{
@@ -72,7 +58,17 @@ html, body{
     left: 33.33%;
     background-color: #fff;
     z-index: 10;
+    /* border-right: 2px solid #ccc; */
+}
+#lg_login .bar{
+    position: absolute;
     border-right: 2px solid #ccc;
+    width: 0px;
+    height: 0%;
+    /* left: 33.33%; */
+    top: 0;
+    right: 0;
+    /* background-color: navy; */
 }
 #lg_login h3{
     /* display: none; */
@@ -152,8 +148,8 @@ html, body{
 }
 /* * * * * #lg_resister * * * * */
 #lg_resister{
-    /* left: 33.33%; */
-    left: 66.66%;
+    left: 33.33%;
+    /* left: 66.66%; */
     background-color: #fff;
     border-right: 2px solid #ccc;
 }
@@ -175,6 +171,21 @@ html, body{
     top: -1px;
     background-color: #780101;
     content: "";
+}
+/* .lg_topIcon*/
+.lg_close{
+    position: absolute;
+    background-image: url(../images/icons2.png);
+    width: 65px;
+    height: 25px;
+    background-position: 90% 15%;
+    /* border: 1px solid red; */
+    top: 20px;
+    right: 0px;
+    z-index: 0;
+    margin-right: 10%;
+    padding: 0;
+    cursor: pointer;
 }
 #lg_resister .lg_resister_inner{
     position: relative;
@@ -229,7 +240,7 @@ html, body{
 #lg_rs_form p{
     position: relative;
 }
-#lg_rs_form p:nth-child(2) a{
+#lg_rs_form p:nth-child(2) .emailCheck{
     position: absolute;
     display: inline-block;
     width: 80px;
@@ -273,11 +284,13 @@ html, body{
     position: relative;
     /* border: 1px solid red; */
     height: 40px;
-    margin: 30px 0;
+    margin: 20px 0;
+    top: -15px;
 }
 #lg_rs_telNoCheck{
     position: relative;
     width: 95%;
+    top: 10px;
 }
 .lg_rs_telNo_check .btn_telCheck{
     position: absolute;
@@ -291,7 +304,7 @@ html, body{
     text-align: center;
     border: 3px solid #780101;
     right: 3%;
-    bottom: -5px;
+    bottom: -15px;
     font-size: 15px;
     font-weight: bold;
     font: "NanumR";

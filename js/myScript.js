@@ -1,6 +1,16 @@
-
-
 $(function() {
+    /* a tag delay 영역*/
+    // $('a').click(function(evt){
+    //     let link = $(this).attr("href");
+    //     setTimeout(function() {
+    //         window.location.href = link;
+    //     }, 5000);
+    // });
+    // function delay (URL) {
+    //     URL = $(this).attr("href");
+    //     setTimeout( function() { window.location = URL }, 500 );
+    // }
+
     /* carousel 영역 */
     let carousel = $(".carousel");
     let carousel_item = $(".carousel-item");
@@ -95,22 +105,31 @@ $(function() {
     });
 
     /* * * * * login.html영역 * * * * */
-    // let Rsw = false;
-    // $('.lg_login_joinUs').click(function() {
-    //     Rsw = !Rsw;
-    //     if(Rsw){
-    //         $('#lg_resister').animate({
-    //             left: '66.66%'
-    //         },1000);
-    //         $('.lg_image_title_resister').show(1000);
-    //         $('.lg_image_title_login').hide();
-    //     } else{
-    //         $('#lg_resister').animate({
-    //             left: '33.33%'
-    //         },1000);
-    //         $('.lg_image_title_resister').hide();
-    //         $('.lg_image_title_login').show(1000);
-    //     }
-    // });
+    let Rsw = false;
+    $('.lg_login_joinUs').click(function() {
+        Rsw = !Rsw;
+        if(Rsw){
+            $('#lg_resister').delay(1000).animate({
+                left: '66.66%'
+            },1000);
+            $('.lg_image_title_resister').show(1000);
+            $('.lg_image_title_login').hide();
+            $('#lg_login').find('.bar').animate({
+                height: '100%'
+            },1000);
+        } else{
+            $('#lg_resister').animate({
+                left: '33.33%'
+            },1000);
+            $('.lg_image_title_resister').hide();
+            $('.lg_image_title_login').show(1000);
+            $('#lg_login').find('.bar').delay(1000).animate({
+                height: '0%'
+            },1000);
+        }
+    });
+    $('.lg_close').click(function() {
+        $('.lg_login_joinUs').trigger('click');
+    });
 }); 
 

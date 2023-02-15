@@ -15,10 +15,6 @@
     <!---------- [S] 로그인 영역 ---------->
     <div id="lg_container">
         <h2 class="hidden">로그인 및 회원가입 영역</h2>
-        <div class="lg_topIcon">
-            <div class="lg_close"></div>
-            <div class="lg_clear"></div>
-        </div>
         <!----- [S] 왼쪽 이미지 영역 ----->
         <div id="lg_image">
             <h3 class="lg_image_title_login">Login</h3>
@@ -28,6 +24,7 @@
         <!----- [S] 중앙 로그인 영역 ----->
         <div id="lg_login">
             <h3>로그인</h3>
+            <div class="bar"></div>
             <div class="lg_login_inner">
                 <form action="#" method="post" id="lg_login_form">
                     <p>
@@ -50,6 +47,10 @@
         <!----- [S] 우측 회원가입 영역 ----->
         <div id="lg_resister">
             <h3>회원가입</h3>
+            <div class="lg_topIcon">
+                <div class="lg_close"></div>
+                <div class="lg_clear"></div>
+            </div>
             <div class="lg_resister_inner">
                 <form action="#" method="post" id="lg_rs_form">
                     <p>
@@ -59,7 +60,8 @@
                     <p>
                         <label for="lg_rs_email">이메일<span class="lg_must">필수</span></label>
                         <input type="email" id="lg_rs_email" name="email" autocomplete="off" required>
-                        <a href="#" class="emailCheck">중복확인</a>
+                        <!-- <a href="#" class="emailCheck">중복확인</a> -->
+                        <button class="emailCheck">중복확인</button>
                     </p>
                     <p>
                         <label for="lg_rs_passWord">비밀번호<span class="lg_must">필수</span><span></span></label>
@@ -84,7 +86,7 @@
                         <div class="lg_rs_telNo_check">
                             <label for="lg_rs_telNoCheck">인증번호 입력</label>
                             <input type="text" maxlength="6" id="lg_rs_telNoCheck" placeholder="인증번호" >
-                            <div class="lg_resister_btn_telCheck">
+                            <div class="lg_rs_btn_telCheck">
                                 <button class="btn_telCheck">인증받기</button>
                                 <button class="btn_telCheck lg_confirm">인증확인</button>
                             </div>
