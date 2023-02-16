@@ -17,19 +17,27 @@ $(function() {
         scroll_top=$(window).scrollTop();
         console.log(scroll_top)
         /* 큰 커튼 */
-        if(scroll_top>10 && scroll_top < 320){
+        if(scroll_top < 320){
             $("#curtain").stop().animate({
                 top: -(scroll_top)*3
             },1000);
         }
-        /* 작은 커틐 */
-        if(scroll_top < 1200) {
+        /* 작은 커튼 */
+        if(scroll_top < 1800) {
             $('.curtain_front').show('blind', 1000);
         } else{
             $('.curtain_front').hide('blind', 1000);
         }
-
+        /* tMenu_form */
+        if(scroll_top < 300){
+            $('#tMenu_form').hide('blind', 1000);
+        } else if(scroll_top < 1800) {
+            $('#tMenu_form').show('blind', 1000);
+        } else{
+            $('#tMenu_form').hide('blind', 1000);
+        }
     })
+
 
     /* carousel 영역 */
     let carousel = $(".carousel");
