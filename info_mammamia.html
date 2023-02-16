@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뮤프 티켓</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/infoArea.css">
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/myScript.js"></script>
+    <style>
+        .contents_page img{
+            width: 1200px;
+        }
+        .contents_video{
+            top: 1000px;
+        }
+    </style>
+    <script>
+        $(function() {
+        $('.sold_out').css('background-color', '#111');
+        $('.sold_out').find('a').css('background', '#777');
+        $('.sold_out').find('a').html('판매종료');
+    });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <!---------- [S] header영역 ---------->
+        <header>
+            <h1>뮤지컬 프로젝트</h1>
+            <nav>
+                <!-- 탑메뉴 -->
+                <!-- <div id="tMenu_form"> -->
+                    <ul id="tMenu">
+                        <li class="tMenuInfo"><a href="#">공연정보</a>
+                            <ul class="tMenuSecond">
+                                <li><a href="#">진행중인 공연</a></li>
+                                <li><a href="#">티켓 오픈 예정</a></li>
+                                <li><a href="#">공연뉴스</a></li>
+                                <li><a href="#">공연장</a></li>
+                            </ul>
+                        </li>
+                        <li class="tMenuBooking"><a href="#">예매하기</a>
+                            <ul class="tMenuSecond">
+                                <li><a href="#">인기 순위</a></li>
+                                <li><a href="#">공연 검색</a></li>
+                                <li><a href="#">할인 티켓</a></li>
+                            </ul></li>
+                        <li class="tMenuCommu"><a href="#">커뮤니티</a>
+                            <ul class="tMenuSecond">
+                                <li><a href="#">뮤프니티</a></li>
+                                <li><a href="#">뮤블로그</a></li>
+                                <li><a href="#">나의 뮤지컬 취향 찾기</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">공지사항</a></li>
+                            </ul></li>
+                        <!-- <li class="tMenuMy" id="login"><a href="login.html">로그인</a></li> -->
+                        <li class="tMenuMy" id="myInfo"><a href="#">내 정보</a>
+                            <ul class="tMenuSecond">
+                                <li><a href="#">알림</a></li>
+                                <li><a href="#">회원 정보</a></li>
+                                <li><a href="#">예매 내역</a></li>
+                                <li><a href="#">관심 목록</a></li>
+                            </ul>
+                        </li>        <!-- 나의 뮤프 -->
+                    </ul>
+                    <form action="#" id="search">
+                        <fieldset>
+                            <div class="like_fieldset">
+                                <legend>검색영역</legend>
+                                <input type="search">
+                                <button type="submit" class="hidden"><img src="images/search.png" alt="검색버튼">검색</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                <!-- </div> -->
+            </nav>
+        </header>
+        <!---------- [E] header영역 ---------->
+        <!---------- [S] contents영역 ---------->
+        <div id="contents">
+            <div id="contents_title">
+                <table>
+                    <tr>
+                        <td>뮤지컬 &lt;맘마미아&gt;</td>
+                        <td>
+                            <span>2023.03.24 ~ 2023.06.25</span>
+                            <span>충무아트센터 대극장</span>
+                        </td>
+                        <td><a href="#">예매하기</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="contents_main">
+                <div class="contents_video">
+                    <!-- <iframe width="1200" height="700" src="https://www.youtube.com/embed/QNyMDD5Wmwk" title="[뮤지컬 캣츠] 1.20 서울 개막! 뮤지컬 캣츠 캐릭터 스팟 영상 공개!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                </div>
+                <div class="contents_page">
+                    <img src="images/info_mammamia.jpg" alt="info_mammamia">
+                </div>
+            </div>
+        </div>
+        <!---------- [E] contents영역 ---------->
+        <!---------- [S] footer영역 ---------->
+        <footer>
+            <div id="foot">
+                <ul id="foot_list">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+                <address>
+                    <p>
+                        <span>사업자 등록 번호 : 10-310407-101114</span>
+                        <span>주식회사 이젠아카데미 뮤프팀 대표 : 한 레베카 인후</span>
+                        <span>Tel : 010-1234-5678</span>
+                        <span>대표 책임자 : 한인후</span>
+                    </p>
+                    <span>ⓒ2023 EZEN Academy MuP Campany All Rights Reserved</span>
+                </address>
+            </div>
+        </footer>
+        <!---------- [E] footer영역 ---------->
+        
+    </div>
+</body>
+</html>

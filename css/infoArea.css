@@ -169,8 +169,9 @@
 .contents_page{
     position: relative;
 }
-.contents_video iframe{
+.contents_video{
     position: absolute;
     display: block;
     top: 730px;
+    z-index: 10;
 }
