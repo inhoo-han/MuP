@@ -1,0 +1,53 @@
+@charset "UTF-8";
+#contents_area{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    top: 100px;
+}
+#contents h2{
+    display: none;
+}
+#contents{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+    /* background-color: salmon; */
+}
+#contents h3{
+    text-align: center;
+    padding: 50px 0;
+    font-size: 2em;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+#contents p{
+    position: relative;
+    top: -30px;
+    color: #ddd;
+    width: 100%;
+    text-align: center;
+}
+.tMenuInfo{
+    position: relative;
+    width: 1200px;
+}
+.whatsHotList{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-left: 50px;
+}
+.whatsHotList div{
+    float: left;
+    width: 180px;
+    margin-right: 50px;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+.whatsHotList div img{
+    width: 180px;
+}
+

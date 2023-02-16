@@ -74,7 +74,7 @@ $(function() {
     /* bulb 영역 */
     $('.bulb').show({}, 3000, 'pulsate');
 
-    /* 이미지 확대 함수 */
+    /* * * 이미지 확대 함수 * * */
     $.fn.imgExpand = function () {
         $(this).find('img').hover(function() {
             $(this).addClass('imgExpand')
@@ -85,11 +85,15 @@ $(function() {
         return this
     }
 
-    /* * * 슬라이드 영역 * * */
+    /* 이미지확대 활용 */
     $('.item').imgExpand();
+    $('#ticketSpecialBox').imgExpand();
+    $('.comReview').imgExpand();
+    $('#ticketBox').imgExpand();
+    $('.whatsHotList>div').imgExpand();
+
 
     /* * * * * #ticket영역 * * * * */
-    $('#ticketBox').imgExpand();
     $('.ticketSaleBox').hover(function() {
         $(this).find('.ticketText').css({
             'background-color': 'inherit',
@@ -104,11 +108,8 @@ $(function() {
             color: 'inherit'
         });
     });
-    $('#ticketSpecialBox').imgExpand();
 
     /* * * * * #community영역 * * * * */
-    $('.comReview').imgExpand();
-
 
     /* * * * * #topic영역 * * * * */
     let topicSW = false;

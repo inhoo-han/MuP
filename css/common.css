@@ -208,3 +208,7 @@ footer{
     border-right: none;
 }
 
+/* * * * * */
+.imgExpand{
+    transform: scale(1.1);
+}
