@@ -5,16 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>뮤프 티켓</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/infoArea.css">
-    <script src="js/jquery-3.6.3.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/myScript.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/infoArea.css">
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/myScript.js"></script>
     <style>
         .contents_page img{
             width: 1200px;
-            margin: 0;
         }
         .contents_video{
             top: 1000px;
@@ -26,6 +25,7 @@
         $('.sold_out').find('a').css('background', '#777');
         $('.sold_out').find('a').html('판매종료');
     });
+        
     </script>
 </head>
 <body>
@@ -74,7 +74,7 @@
                             <div class="like_fieldset">
                                 <legend>검색영역</legend>
                                 <input type="search">
-                                <button type="submit" class="hidden"><img src="images/search.png" alt="검색버튼">검색</button>
+                                <button type="submit" class="hidden"><img src="../images/search.png" alt="검색버튼">검색</button>
                             </div>
                         </fieldset>
                     </form>
@@ -87,10 +87,18 @@
             <div id="contents_title">
                 <table>
                     <tr>
-                        <td>뮤지컬 &lt;물랑루즈&gt; 아시아초연</td>
+                        <td>[서울] 뮤지컬 &lt;캣츠&gt; 오리지널 내한</td>
                         <td>
-                            <span>2022.12.16 ~2023.03.05</span>
-                            <span>블루스퀘어 신한카드홀</span>
+                            <span>2023.01.02 ~ 2023.3.12</span>
+                            <span>세종문화회관 대극장</span>
+                        </td>
+                        <td><a href="#">예매하기</a></td>
+                    </tr>
+                    <tr>
+                        <td>[인천] 뮤지컬 &lt;캣츠&gt; 오리지널 내한</td>
+                        <td>
+                            <span>2023.03.24 ~ 2023.03.26</span>
+                            <span>인천문화예술회관 대공연장</span>
                         </td>
                         <td><a href="#">예매하기</a></td>
                     </tr>
@@ -98,11 +106,10 @@
             </div>
             <div id="contents_main">
                 <div class="contents_video">
-                    <!-- <iframe width="1200" height="700" src="https://www.youtube.com/embed/QNyMDD5Wmwk" title="[뮤지컬 캣츠] 1.20 서울 개막! 뮤지컬 캣츠 캐릭터 스팟 영상 공개!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                    <iframe width="1200" height="700" src="https://www.youtube.com/embed/QNyMDD5Wmwk" title="[뮤지컬 캣츠] 1.20 서울 개막! 뮤지컬 캣츠 캐릭터 스팟 영상 공개!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div class="contents_page">
-                    <img src="images/info_moulinRouge.jpg" alt="info_moulinRouge">
-                    <img src="images/info_moulinRouge02.jpg" alt="info_moulinRouge">
+                    <img src="../images/info_cats.jpg" alt="info_cats">
                 </div>
             </div>
         </div>

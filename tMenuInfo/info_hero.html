@@ -5,12 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>뮤프 티켓</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/infoArea.css">
-    <script src="js/jquery-3.6.3.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/infoArea.css">
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/myScript.js"></script>
+    <style>
+        .contents_page img{
+            width: 1200px;
+        }
+        .contents_video{
+            top: 1000px;
+        }
+    </style>
     <script>
+        $(function() {
+        $('.sold_out').css('background-color', '#111');
+        $('.sold_out').find('a').css('background', '#777');
+        $('.sold_out').find('a').html('판매종료');
+    });
         
     </script>
 </head>
@@ -60,7 +74,7 @@
                             <div class="like_fieldset">
                                 <legend>검색영역</legend>
                                 <input type="search">
-                                <button type="submit" class="hidden"><img src="images/search.png" alt="검색버튼">검색</button>
+                                <button type="submit" class="hidden"><img src="../images/search.png" alt="검색버튼">검색</button>
                             </div>
                         </fieldset>
                     </form>
@@ -73,10 +87,10 @@
             <div id="contents_title">
                 <table>
                     <tr>
-                        <td>[부산] 뮤지컬 &lt;오페라의 유령&gt;</td>
+                        <td>뮤지컬 &lt;영웅&gt;</td>
                         <td>
-                            <span>2023.03.25 ~ 2023.06.18</span>
-                            <span>드림씨어터</span>
+                            <span>2023.03.17 ~2023.05.21</span>
+                            <span>블루스퀘어 신한카드홀</span>
                         </td>
                         <td><a href="#">예매하기</a></td>
                     </tr>
@@ -84,10 +98,9 @@
             </div>
             <div id="contents_main">
                 <div class="contents_video">
-                    <iframe width="1200" height="700" src="https://www.youtube.com/embed/kw9ZiOeHl04" title="[뮤지컬 오페라의 유령] 2023 캐스트 비디오 공개!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div class="contents_page">
-                    <img src="images/info_thePhantomOfTheOpera.jpg" alt="info_thePhantomOfTheOpera">
+                    <img src="../images/info_hero.jpg" alt="info_hero">
                 </div>
             </div>
         </div>
