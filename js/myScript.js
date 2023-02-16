@@ -61,7 +61,7 @@ $(function() {
         //     carousel.css("transform", "rotateY(" + currdeg + "deg)");
         // }, 3000);
         nowst = setInterval(function() {
-            $('.next').trigger('click');
+            $('.next').stop().trigger('click');
         }, 3000);
     };
     moveNowShowing();
