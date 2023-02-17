@@ -476,7 +476,8 @@ article:last-child{
 .frame{
     position: absolute;
     width: 450px;
-    z-index: 10;
+    z-index: 999;
+    pointer-events: none;
 }
 .choiceRank{
     position: relative;
@@ -484,25 +485,33 @@ article:last-child{
     width: 450px;
     height: 680px;
 }
+.choiceRank>div{
+    position: absolute;
+    width: 199px;
+    height: 266px;
+    display: inline-block;
+    overflow: hidden;
+}
 .choiceRank img{
     position: relative;
     width: 200px;
+    display: inline-block;
 }
-.choiceRank li:nth-child(1) img{
+.choiceRank div:nth-child(1){
     left: 20px;
     top: 130px;
 }
-.choiceRank li:nth-child(2) img{
+.choiceRank div:nth-child(2){
     left: 20px;
-    top: 120px;
+    top: 398px;
 }
-.choiceRank li:nth-child(3) img{
+.choiceRank div:nth-child(3){
     left: 230px;
-    top: -520px;
+    top: 20px;
 }
-.choiceRank li:nth-child(4) img{
+.choiceRank div:nth-child(4){
     left: 230px;
-    top: -530px;
+    top: 280px;
 }
 /* hover하면 이미지가 살짝 작게보이는 이벤트 하고싶었는데
 테두리가 다 가리고 있어서 안 된다.. 링크도 안 걸림..

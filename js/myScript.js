@@ -91,6 +91,7 @@ $(function() {
     $('.comReview').imgExpand();
     $('#ticketBox').imgExpand();
     $('.whatsHotList>div').imgExpand();
+    $('.choiceRank>div').imgExpand();
 
 
     /* * * * * #ticket영역 * * * * */

@@ -43,9 +43,12 @@
 .whatsHotList div{
     float: left;
     width: 180px;
+    height: 240px;
     margin-right: 50px;
     margin-bottom: 100px;
     overflow: hidden;
+    border: 1px solid #333;
+    border-radius: 3px;
 }
 .whatsHotList div img{
     width: 180px;
