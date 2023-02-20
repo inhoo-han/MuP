@@ -1031,7 +1031,7 @@ aside>.more{
 }
 .topicBtn button:hover{
     outline-color: #f8b500;
-    box-shadow: -1px -1px 1px #f8b500;
+    /* box-shadow: -1px -1px 1px #f8b500; */
     /* font-size: 1.1em; */
 }
 .topicBtn button:hover a{
