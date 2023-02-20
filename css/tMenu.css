@@ -5,6 +5,9 @@
     height: 1000px;
     top: 100px;
 }
+h1 img{
+    width: 200px;
+}
 #contents h2{
     display: none;
 }

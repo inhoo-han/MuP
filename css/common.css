@@ -24,13 +24,15 @@ header{
 }
 h1{
     position: absolute;
-    left: 50%;
-    margin-left: -150px;
-    width: 300px;
+    z-index: 3000;
+    left: 1%;
+    top: -5px;
+    background-color: #fff;
     text-align: center;
-    top: 10px;
-    color: #aaa;
-    visibility: hidden;
+    /* visibility: hidden; */
+}
+h1 img{
+    width: 200px;
 }
 nav{
     position: relative;
