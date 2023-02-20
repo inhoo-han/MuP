@@ -31,10 +31,10 @@ $(function() {
         /* tMenu_form */
         if(scroll_top < 300){
             $('#tMenu_form').hide('blind', 1000);
-            $('h1').show();
+            $('h1').show('blind', 1000);
         } else if(scroll_top < 1800) {
             $('#tMenu_form').show('blind', 1000);
-            $('h1').hide();
+            $('h1').hide('blind', 1000);
         } else{
             $('#tMenu_form').hide('blind', 1000);
         }
