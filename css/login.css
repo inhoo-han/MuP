@@ -10,6 +10,20 @@ html, body{
     margin: 0;
     box-sizing: border-box;
 }
+#lg_container .logo{
+    z-index: 3000;
+    position: absolute;
+    left: 50%;
+    margin-left: -230px;
+    width: 200px;
+    text-align: center;
+    top: 40px;
+    color: #aaa;
+}
+#lg_container .logo img{
+    position: absolute;
+    width: 200px;
+}
 #lg_container h2{
     display: none;
 }

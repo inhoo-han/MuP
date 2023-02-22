@@ -90,7 +90,7 @@ h4{
 /* * * quickMenu 영역 * * */
 #quickMenu{
     position: fixed;
-    left: 1500px;
+    left: 1700px;
     bottom: 50px;
     width: 60px;
     height: 60px;
@@ -920,6 +920,7 @@ aside>.more{
     transition: transform 1s;
     border-radius: 20px;
     overflow: hidden;
+    cursor: pointer;
 }
 #topicTicketA::before{
     position: absolute;
@@ -987,6 +988,7 @@ aside>.more{
     overflow: hidden;
     /* 체크 왜 테두리 안 없어져??????? */
     border: none;
+    cursor: pointer;
 }
 #topicTicketB p{
     content: "";
@@ -1055,6 +1057,7 @@ aside>.more{
     height: 80px;
     /* border: 1px solid yellow; */
     padding: 0 0 0 5px;
+    cursor: pointer;
 }
 .topicBtn button{
     position: absolute;
@@ -1063,14 +1066,15 @@ aside>.more{
     background-image: linear-gradient(to bottom, #555 0%, #333 100%);
     outline: 5px dotted #ccc;
     outline-offset: -10px;
+    color: #fff;
+    font-family: "NanumEB";
+    font-size: 1em;
 }
 .topicBtn button:hover{
     outline-color: #f8b500;
     /* box-shadow: -1px -1px 1px #f8b500; */
     /* font-size: 1.1em; */
-}
-.topicBtn button:hover a{
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 .topicBtn .topicComWrite{
     left: 80px;
@@ -1080,11 +1084,6 @@ aside>.more{
 }
 .topicBtn .topicOthers{
     left: 740px;
-}
-.topicBtn button a{
-    color: #fff;
-    font-family: "NanumEB";
-    font-size: 1.2em;
 }
 /* * * * * footer영역 * * * * */
 footer{
