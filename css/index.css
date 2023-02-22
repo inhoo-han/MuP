@@ -87,6 +87,41 @@ h4{
 .imgExpand{
     transform: scale(1.1);
 }
+/* * * quickMenu 영역 * * */
+#quickMenu{
+    position: fixed;
+    left: 1500px;
+    bottom: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+    /* background-color: #000; */
+}
+#quickMenu .up{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background-image: url(../images/icons.png);
+    background-repeat: no-repeat;
+    background-position: 85% 4.5%; */
+    z-index: 20;
+    text-align: center;
+}
+#quickMenu .up span{
+    position: relative;
+    display: block;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    top: -2px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.2em;
+}
 /* * * 커튼 영역 * * */
 #curtain{
     position: relative;
