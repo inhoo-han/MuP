@@ -37,6 +37,7 @@ $(function() {
             $('h1').hide('blind', 500);
         } else{
             $('#tMenu_form').hide('blind', 500);
+            $('h1').hide('blind', 500);
         }
 
         /* 퀵메뉴 */
